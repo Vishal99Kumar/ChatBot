@@ -1,0 +1,36 @@
+<div id="close">
+    <i [attr.tabindex]="0" class="material-icons close-icon" (keydown.enter)="dialogeClose()" (click)="dialogeClose()">
+      cancel
+    </i>
+  </div>
+<div class="outerclass">
+  <div class="header"><app-header></app-header></div>
+  <div class="main-content">
+    <div  #chatContainer *ngIf="!display" [ngClass]="display == true ? 'chat-window' : 'chat-window-display'">
+      <div class="chat-session">
+          <ul class="message-list">
+              <li class="user-message"
+                  [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
+                  *ngFor="let message of messages">
+                  <span>{{ message.text }}</span>
+              </li>
+          </ul>
+      </div>
+  </div>
+  </div>
+  <div class="footer footerExclusive">
+    <form (ngSubmit)="sendMessage()" class="message-input-form">
+      <div class="inputbox">
+    <input type="text" id="message" name="message" autocomplete="off" [(ngModel)]="message" placeholder="Chat with AI Chatbot">
+  </div>
+  <div>
+     <button mat-icon-button class="example-icon">
+          <mat-icon class="send-icon">send</mat-icon>
+      </button>
+    </div>
+  </form>
+  
+    <p>Powered by <a href="https://glorinz.com/"> Glorius Insight</a></p>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+.imgbtn {
+    background-color: transparent;
+    height: 60px;
+    width: 50px;
+    border: 0px;
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    cursor: pointer;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    border-radius: 200px;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.blurClass{
+    background-color:rgba(255,255,255,.3);
+  backdrop-filter: blur(10px);
+}

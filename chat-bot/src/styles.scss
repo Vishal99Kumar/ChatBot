@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    //height: 100%;
+    /* styles.css or your custom CSS file */
+    //background-image: url('assets/background.png'); (For Punjab Govt)
+    background-image: url('assets/BackgroundDelhi.png'); //(For Hamad Airport)
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* optional, makes the background fixed while scrolling */
+}
+i,a,button{
+    cursor: pointer;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .blurClass{
+    background-color:rgba(255,255,255,.3);
+  backdrop-filter: blur(10px);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

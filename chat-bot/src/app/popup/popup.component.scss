@@ -1,0 +1,135 @@
+.outerclass{
+    display: flex;
+    height: 80vh;
+  width: 100%;
+  background-color: beige;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  border: 1px solid rgb(219, 212, 212);
+  //padding: 4px;
+  //padding-left: 12px;
+  align-items: center;
+  gap: 8px;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 25px;
+}
+.main-content {
+  flex: 1;
+  border: 1px solid rgb(219, 212, 212);
+  //overflow-y: scroll;
+}
+.footer {
+  display: flex;
+  padding: 4px;
+  //align-items: center;
+  //gap: 8px;
+  flex-direction: column;
+}
+.footerExclusive {
+  //margin: auto;
+  text-align: center;
+
+}
+
+.footerExclusive p {
+  //margin: 0;
+  text-align: center;
+  font-size: smaller;
+
+}
+
+.footerExclusive a {
+  color: #337ab7;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+// @media only screen and (max-device-width: 990px){
+//   .footerExclusive {
+//       width: 19rem;
+//       margin: inherit;
+//   }
+// }
+
+.message-input-form, .example-icon{
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.inputbox
+{
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  flex: 1;
+}
+input {
+  width: 90%;
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.chat-window-display {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //overflow-y: scroll; 
+}
+
+.right-message {
+  color: black;
+  text-align: right;
+  background-color:rgba(135, 188, 245, 0.61) ;
+  border-radius: 5px;
+  padding: 8px;
+  margin:15px;
+  border-radius: 8px 8px 0px;
+  top: 70px;
+  right: 490px;
+  max-width:fit-content;
+  margin-left: auto;
+  font-size: 12px;
+}
+
+
+
+.left-message {
+  color: black;
+  text-align:left;
+  padding: 8px;
+  margin: 7px;
+  //background-color:rgba(218, 231, 245, 0.61) ; Original Color
+  background-color:rgba(242, 247, 253, 0.61) ;
+   border-top-left-radius: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    max-width: fit-content;
+    font-size: 12px;
+}
+
+.message-list {
+  // background-color:red;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.chat-session {
+  display: flex;
+  flex-direction: column-reverse; /* Stack messages from bottom to top */
+  //height: 300px; /* Set a fixed height for the chat container or adjust as needed */
+  //overflow-y: auto; /* Enable vertical scrolling if the messages exceed the container height */
+}

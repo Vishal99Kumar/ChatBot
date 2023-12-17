@@ -13,9 +13,11 @@ export class AppComponent {
   openDialog(): void {
     const dialogConfig = new MatDialogConfig();
 
-        dialogConfig.disableClose = true;
-        dialogConfig.autoFocus = true;
+        dialogConfig.disableClose = true,
+        dialogConfig.autoFocus = true,
         dialogConfig.backdropClass = "blurClass",
+        dialogConfig.panelClass = "popupClass",
+        dialogConfig.maxWidth = "35vw",
 
         this.dialog.open(PopupComponent, dialogConfig);
   }

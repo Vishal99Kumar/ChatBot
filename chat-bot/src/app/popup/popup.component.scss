@@ -7,7 +7,7 @@
 }
 
 .header {
-  display: flex;
+  //display: flex;
   border: 1px solid rgb(219, 212, 212);
   //padding: 4px;
   //padding-left: 12px;
@@ -21,6 +21,7 @@
   border-radius: 25px;
 }
 .main-content {
+  display: flex;
   flex: 1;
   border: 1px solid rgb(219, 212, 212);
   //overflow-y: scroll;
@@ -86,6 +87,15 @@ input {
   justify-content: space-between;
   //overflow-y: scroll; 
 }
+.chat-window {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // background-color:red;
+
+ 
+}
 
 .right-message {
   color: black;
@@ -97,9 +107,10 @@ input {
   border-radius: 8px 8px 0px;
   top: 70px;
   right: 490px;
-  max-width:fit-content;
+  //max-width:fit-content;
   margin-left: auto;
   font-size: 12px;
+  max-width: 70%;
 }
 
 
@@ -114,8 +125,9 @@ input {
    border-top-left-radius: 10px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    max-width: fit-content;
+    //max-width: fit-content;
     font-size: 12px;
+    max-width: 70%;
 }
 
 .message-list {
@@ -130,6 +142,51 @@ input {
 .chat-session {
   display: flex;
   flex-direction: column-reverse; /* Stack messages from bottom to top */
-  //height: 300px; /* Set a fixed height for the chat container or adjust as needed */
-  //overflow-y: auto; /* Enable vertical scrolling if the messages exceed the container height */
+  height: 300px; /* Set a fixed height for the chat container or adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling if the messages exceed the container height */
+}
+.displayMessage{
+  word-break: break-all;
+  display: flex;
+  text-align: left;
+}
+
+///////////////////////////typing gif starts
+.typer {
+  margin: 32px;
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #5f5e5f;
+    display: inline-block;
+    margin: 1px;
+    border-radius: 50%;
+    &:nth-child(1) {
+      animation: bounce 1s infinite;
+    }
+    &:nth-child(2) {
+      animation: bounce 1s infinite .2s;
+    }
+    &:nth-child(3) {
+      animation: bounce 1s infinite .4s;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/// /////////////////typing gif ends
+
+.details{
+  display: flex;
 }

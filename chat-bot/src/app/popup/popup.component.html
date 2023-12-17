@@ -6,13 +6,23 @@
 <div class="outerclass">
   <div class="header"><app-header></app-header></div>
   <div class="main-content">
-    <div  #chatContainer *ngIf="!display" [ngClass]="display == true ? 'chat-window' : 'chat-window-display'">
-      <div class="chat-session">
+    <div *ngIf="display" class="details">
+      <app-dashboard> </app-dashboard>
+  </div>
+    <div *ngIf="!display" [ngClass]="display == true ? 'chat-window' : 'chat-window-display'">
+      <div #chatContainer class="chat-session">
           <ul class="message-list">
+            <!-- <ng-container *ngIf = "typingGif == true">
+              <div class="typer user-message displayMessage left-message">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              </div>
+            </ng-container> -->
               <li class="user-message"
                   [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
                   *ngFor="let message of messages">
-                  <span>{{ message.text }}</span>
+                  <span class="displayMessage">{{ message.text }}</span>
               </li>
           </ul>
       </div>

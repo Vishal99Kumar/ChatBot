@@ -1,8 +1,8 @@
 .outerclass{
     display: flex;
-    height: 80vh;
-  width: 100%;
-  background-color: beige;
+    height: 90vh;
+  //width: 100%;
+  //background-color: beige;
   flex-direction: column;
 }
 
@@ -24,7 +24,7 @@
   display: flex;
   flex: 1;
   border: 1px solid rgb(219, 212, 212);
-  //overflow-y: scroll;
+  overflow-y: scroll;
 }
 .footer {
   display: flex;
@@ -85,6 +85,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  //min-width: 30vw;
   //overflow-y: scroll; 
 }
 .chat-window {
@@ -143,7 +144,8 @@ input {
   display: flex;
   flex-direction: column-reverse; /* Stack messages from bottom to top */
   height: 300px; /* Set a fixed height for the chat container or adjust as needed */
-  overflow-y: auto; /* Enable vertical scrolling if the messages exceed the container height */
+  //overflow-y: auto; /* Enable vertical scrolling if the messages exceed the container height */
+  flex: 1;
 }
 .displayMessage{
   word-break: break-all;

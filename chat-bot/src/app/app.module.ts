@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { DataShareService } from './data-share.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LookingForComponent } from './looking-for/looking-for.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PopupComponent,
     HeaderComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    LookingForComponent
   ],
   imports: [
     BrowserModule,

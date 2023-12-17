@@ -17,7 +17,8 @@ export class AppComponent {
         dialogConfig.autoFocus = true,
         dialogConfig.backdropClass = "blurClass",
         dialogConfig.panelClass = "popupClass",
-        dialogConfig.maxWidth = "35vw",
+        dialogConfig.maxWidth = "30vw",
+        dialogConfig.minWidth = "30vw",
 
         this.dialog.open(PopupComponent, dialogConfig);
   }

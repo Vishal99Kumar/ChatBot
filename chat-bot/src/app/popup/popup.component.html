@@ -9,7 +9,7 @@
     <div *ngIf="display" class="details">
       <app-dashboard> </app-dashboard>
   </div>
-    <div *ngIf="!display" [ngClass]="display == true ? 'chat-window' : 'chat-window-display'">
+    <div *ngIf="!display" class="chat-window-display">
       <div #chatContainer class="chat-session">
           <ul class="message-list">
             <!-- <ng-container *ngIf = "typingGif == true">

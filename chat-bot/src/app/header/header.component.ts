@@ -19,8 +19,15 @@ export class HeaderComponent {
       // height: '400px',
       width: '400px',
       position: { bottom: '10px' },
+      panelClass: ["popupClass", 'animate__animated','animate__slideInUp'],
+      backdropClass: "internalBlurClass",
+      autoFocus: true,
+      maxWidth: "30vw",
+      minWidth: "30vw",
+      disableClose: true
     });
   }
+
   CloseChatDialog() {
     //console.log('close');
     this.dataService.updateSharedVariable(this.Display);

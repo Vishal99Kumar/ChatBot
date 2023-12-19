@@ -20,6 +20,8 @@ import { LoginComponent } from './login/login.component';
 import { DataShareService } from './data-share.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LookingForComponent } from './looking-for/looking-for.component';
+import { MessageServiceService } from './message-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,9 +45,10 @@ import { LookingForComponent } from './looking-for/looking-for.component';
     MatMenuModule,
     MatDividerModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [DataShareService],
+  providers: [DataShareService,MessageServiceService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

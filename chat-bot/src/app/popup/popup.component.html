@@ -12,13 +12,15 @@
     <div *ngIf="!display" class="chat-window-display">
       <div #chatContainer class="chat-session">
           <ul class="message-list">
-            <!-- <ng-container *ngIf = "typingGif == true">
+            <ng-container *ngIf = "typingGif == true">
               <div class="typer user-message displayMessage left-message">
+                <div class="divtyperHandling">
               <span class="dot"></span>
               <span class="dot"></span>
               <span class="dot"></span>
+            </div>
               </div>
-            </ng-container> -->
+            </ng-container>
               <li class="user-message"
                   [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
                   *ngFor="let message of messages">

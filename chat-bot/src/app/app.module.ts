@@ -22,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LookingForComponent } from './looking-for/looking-for.component';
 import { MessageServiceService } from './message-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TileDataComponent } from './tile-data/tile-data.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     LoginComponent,
     DashboardComponent,
-    LookingForComponent
+    LookingForComponent,
+    TileDataComponent
   ],
   imports: [
     BrowserModule,

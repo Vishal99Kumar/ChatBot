@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { DataShareService } from '../data-share.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
-  constructor(public dialog: MatDialogRef<LoginComponent>) {}
+export class LoginComponent implements OnInit {
+  constructor(private dataService: DataShareService,
+    public dialog: MatDialogRef<LoginComponent>) {}
+
+  ngOnInit(): void {
+    this.dataService.updatecloseHeader(true);
+  }
 
   close(){
     document.getElementsByClassName("animate__animated")[0].classList.remove("animate__slideInUp")

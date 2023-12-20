@@ -15,6 +15,7 @@ export class HeaderComponent {
     private dataService: DataShareService
   ) {}
   openDialog() {
+    this.dataService.updatecloseHeader(true);
     const dialogRef = this.dialog.open(LoginComponent, {
       // height: '400px',
       width: '400px',
@@ -29,7 +30,9 @@ export class HeaderComponent {
   }
 
   CloseChatDialog() {
+    this.dataService.updatecloseHeader(false);
     //console.log('close');
+    this.dataService.updateInternalVariable("nothing");
     this.dataService.updateSharedVariable(this.Display);
   }
 }

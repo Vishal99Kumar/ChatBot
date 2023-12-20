@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { DataShareService } from '../data-share.service';
 import { MessageServiceService } from '../message-service.service';
@@ -13,13 +13,14 @@ interface messageBody {
   templateUrl: './popup.component.html',
   styleUrls: ['./popup.component.scss']
 })
-export class PopupComponent {
+export class PopupComponent implements OnInit {
   @ViewChild('chatContainer', { static: false }) chatContainer: ElementRef;
   message: string = '';
   messages: messageBody[] = [];
   responseOnServer: string = '';
   display: boolean = true;
   typingGif: boolean = false;
+  isInnerTileShown:boolean = false;
   constructor(
     private msg: MessageServiceService,
     private dialogRef: MatDialogRef<PopupComponent>,
@@ -32,12 +33,20 @@ export class PopupComponent {
         //console.log(this.display);
       });
     }
+  ngOnInit(): void {
+    this.dataService.internalTile.subscribe((res) => {
+      this.isInnerTileShown = (res == "nothing")? false : true;
+    })
+  }
 
   dialogeClose(): void {
+    this.dataService.updatecloseHeader(false);
+    this.dataService.updateInternalVariable("nothing");
     this.dialogRef.close();
   }
 
   sendMessage() {
+    this.dataService.updateInternalVariable("nothing");
     this.typingGif = true;
     if (this.message && this.message.trim() !== '') {
     this.messages.push({

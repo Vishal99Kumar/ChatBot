@@ -14,4 +14,19 @@ export class DataShareService {
   updateSharedVariable(newValue: any) {
     this.sharedVariableSubject.next(newValue);
   }
+
+  private showInternalTile = new BehaviorSubject<any>("nothing");
+  internalTile = this.showInternalTile.asObservable();
+
+  updateInternalVariable(newValue: string) {
+    this.showInternalTile.next(newValue);
+  }
+
+  private closeHeader = new BehaviorSubject<any>(false);
+  closeHeaderPage = this.closeHeader.asObservable();
+
+  updatecloseHeader(newValue: boolean) {
+    this.closeHeader.next(newValue);
+  }
+
 }

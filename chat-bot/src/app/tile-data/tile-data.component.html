@@ -1,0 +1,15 @@
+<p>{{tileClicked}}</p>
+<ng-container [ngSwitch]="tileClicked">
+    <ng-container *ngSwitchCase="'Status'">
+        <p>Status is working fine</p>
+    </ng-container>
+    <ng-container *ngSwitchCase="'Lost'">
+        <p>Lost is working fine</p>
+    </ng-container>
+    <ng-container *ngSwitchCase="'Waiting'">
+        <p>Waiting is working fine</p>
+    </ng-container>
+    <ng-container *ngSwitchCase="'Cab'">
+        <p>Cab is working fine</p>
+    </ng-container>
+</ng-container>

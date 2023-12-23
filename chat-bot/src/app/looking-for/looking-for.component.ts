@@ -40,6 +40,24 @@ export class LookingForComponent implements OnInit {
       case "Cab":
         this.dataService.updateInternalVariable("Cab");
         break;
+      case "Immigration":
+        this.dataService.updateInternalVariable("Immigration");
+        break;
+      case "Cargo":
+        this.dataService.updateInternalVariable("Cargo");
+        break;
+      case "Parking":
+        this.dataService.updateInternalVariable("Parking");
+        break;
+      case "Cafes":
+        this.dataService.updateInternalVariable("Cafes");
+        break;
+      case "Medical":
+        this.dataService.updateInternalVariable("Medical");
+        break;
+      case "Weather":
+        this.dataService.updateInternalVariable("Weather");
+        break;
       default:
         window.open("https://www.google.com", "_blank");
         break;              

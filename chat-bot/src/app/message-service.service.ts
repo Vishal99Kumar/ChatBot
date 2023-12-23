@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
 export class MessageServiceService {
   private apiUrl = 'http://127.0.0.1:5000'; // Update with your Flask server URL (For calling old backend)
 
+  private weatherApi = 'http://api.openweathermap.org/data/2.5/forecast?lat=28.70&lon=77.10&appid=dc0311740a9e15744a61eddb2ca9cdc1';
   // private apiUrl = 'https://abcde1234.azurewebsites.net';
+  //https://api.openweathermap.org/data/2.5/forecast?q=delhi&appid=dc0311740a9e15744a61eddb2ca9cdc1&mode=xml&units=metric
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {

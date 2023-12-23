@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   close(){
+    this.dataService.updatecloseHeader(false);
     document.getElementsByClassName("animate__animated")[0].classList.remove("animate__slideInUp")
       document.getElementsByClassName("animate__animated")[0].classList.add("animate__slideOutDown");
       setTimeout(()=>{this.dialog.close();}, 1000);

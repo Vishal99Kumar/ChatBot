@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PopupComponent } from './popup/popup.component';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,6 +23,13 @@ import { LookingForComponent } from './looking-for/looking-for.component';
 import { MessageServiceService } from './message-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TileDataComponent } from './tile-data/tile-data.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material/select';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -48,7 +55,14 @@ import { TileDataComponent } from './tile-data/tile-data.component';
     MatDividerModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [DataShareService,MessageServiceService],
   bootstrap: [AppComponent],

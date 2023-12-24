@@ -34,6 +34,7 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { DatePipe } from '@angular/common';
 import { ParkingComponent } from './components/parking/parking.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { RelaxComponent } from './components/relax/relax.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {MatRadioModule} from '@angular/material/radio';
     LookingForComponent,
     TileDataComponent,
     WeatherComponent,
-    ParkingComponent
+    ParkingComponent,
+    RelaxComponent
   ],
   imports: [
     BrowserModule,

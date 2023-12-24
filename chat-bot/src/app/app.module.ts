@@ -32,6 +32,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatNativeDateModule} from '@angular/material/core';
 import { WeatherComponent } from './components/weather/weather.component';
 import { DatePipe } from '@angular/common';
+import { ParkingComponent } from './components/parking/parking.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { DatePipe } from '@angular/common';
     DashboardComponent,
     LookingForComponent,
     TileDataComponent,
-    WeatherComponent
+    WeatherComponent,
+    ParkingComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import { DatePipe } from '@angular/common';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [DataShareService,MessageServiceService,DatePipe],
   bootstrap: [AppComponent],

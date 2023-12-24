@@ -1,0 +1,25 @@
+.parkContainer{
+    display: flex;
+    flex-direction: column;
+}
+.internalbuttons{
+    flex-direction: row;
+}
+.selected{
+    background-color: #faa71b;
+}
+
+.ambuttons{
+    flex-direction: row;
+}
+
+.formlook{
+    border: solid 1px rgb(73, 69, 69);
+    display: flex;
+    flex-direction: column;
+}
+
+.formRow{
+    flex-direction: row;
+    gap: 10px 20px;
+}

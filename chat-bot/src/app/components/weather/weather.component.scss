@@ -1,0 +1,67 @@
+.weatherContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.weather__body {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: #c4bebe;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather__icon img {
+    width: 100px;
+}
+
+.weather__temperature {
+    font-size: 1.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #c4bebe;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+}

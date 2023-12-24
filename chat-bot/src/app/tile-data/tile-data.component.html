@@ -1,4 +1,4 @@
-<p>{{tileClicked}}</p>
+<div class="tileContainer">
 <ng-container [ngSwitch]="tileClicked">
     <ng-container *ngSwitchCase="'Status'">
         <p>Status is working fine</p>
@@ -239,6 +239,7 @@
         </mat-tab-group>
     </ng-container>
     <ng-container *ngSwitchCase="'Weather'">
-        <p>Weather is working fine</p>
+        <app-weather></app-weather>
     </ng-container>
 </ng-container>
+</div>

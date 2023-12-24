@@ -30,6 +30,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatSelectModule} from '@angular/material/select';
 import {MatNativeDateModule} from '@angular/material/core';
+import { WeatherComponent } from './components/weather/weather.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     LoginComponent,
     DashboardComponent,
     LookingForComponent,
-    TileDataComponent
+    TileDataComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatNativeDateModule,
     ReactiveFormsModule
   ],
-  providers: [DataShareService,MessageServiceService],
+  providers: [DataShareService,MessageServiceService,DatePipe],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

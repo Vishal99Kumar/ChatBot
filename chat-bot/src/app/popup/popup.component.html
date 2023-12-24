@@ -5,7 +5,7 @@
   </div>
 <div class="outerclass">
   <div class="header"><app-header></app-header></div>
-  <ng-container *ngIf="isInnerTileShown"><div class="main-content"><app-tile-data></app-tile-data></div></ng-container>
+  <ng-container *ngIf="isInnerTileShown"><div class="main-content specific"><app-tile-data></app-tile-data></div></ng-container>
   <ng-container *ngIf="!isInnerTileShown">
   <div class="main-content">
     <div *ngIf="display" class="details">

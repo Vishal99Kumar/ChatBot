@@ -1,0 +1,250 @@
+[
+    {
+        "name of item": "Bag",
+        "date": "01/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Laptop, Cash",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Wallet",
+        "date": "02/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Credit cards, ID",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Laptop",
+        "date": "03/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Documents, Charger",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Mobile Phone",
+        "date": "04/12/2023",
+        "Terminal": "T1",
+        "Property Details": "SIM cards, Photos",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Passport",
+        "date": "05/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Visa, Boarding Pass",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Umbrella",
+        "date": "06/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Handle, Fabric",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Headphones",
+        "date": "07/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Wire, Ear Cushions",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Sunglasses",
+        "date": "08/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Frame, Lenses",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Keys",
+        "date": "09/12/2023",
+        "Terminal": "T3",
+        "Property Details": "House, Car",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Watch",
+        "date": "10/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Metal Band, Dial",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Camera",
+        "date": "11/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Lens, Memory Card",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Book",
+        "date": "12/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Author, Genre",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Power Bank",
+        "date": "13/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Capacity, USB Cable",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Hat",
+        "date": "14/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Brim, Material",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Gloves",
+        "date": "15/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Size, Material",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Charger",
+        "date": "16/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Type, Brand",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Medication",
+        "date": "17/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Name, Dosage",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Snacks",
+        "date": "18/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Brand, Expiry Date",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Toothbrush",
+        "date": "19/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Brand, Color",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Hat",
+        "date": "20/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Brim, Material",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Glasses Case",
+        "date": "21/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Size, Material",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Travel Pillow",
+        "date": "22/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Material, Color",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Charger",
+        "date": "23/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Type, Brand",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Wallet",
+        "date": "24/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Credit cards, ID",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Passport",
+        "date": "25/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Visa, Boarding Pass",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Headphones",
+        "date": "26/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Wire, Ear Cushions",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Mobile Phone",
+        "date": "27/12/2023",
+        "Terminal": "T3",
+        "Property Details": "SIM cards, Photos",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Laptop",
+        "date": "28/12/2023",
+        "Terminal": "T1",
+        "Property Details": "Documents, Charger",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Bag",
+        "date": "29/12/2023",
+        "Terminal": "T2",
+        "Property Details": "Laptop, Cash",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Watch",
+        "date": "30/12/2023",
+        "Terminal": "T3",
+        "Property Details": "Metal Band, Dial",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    },
+    {
+        "name of item": "Keys",
+        "date": "31/12/2023",
+        "Terminal": "T1",
+        "Property Details": "House, Car",
+        "Contact Mob": "0124-4797300",
+        "Contact Mail": "lostproperty.dial@gmrgroup.in"
+    }
+]

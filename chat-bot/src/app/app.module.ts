@@ -36,6 +36,7 @@ import { ParkingComponent } from './components/parking/parking.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { RelaxComponent } from './components/relax/relax.component';
 import { FlightStatusComponent } from './components/flight-status/flight-status.component';
+import { CafesComponent } from './components/cafes/cafes.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FlightStatusComponent } from './components/flight-status/flight-status.
     WeatherComponent,
     ParkingComponent,
     RelaxComponent,
-    FlightStatusComponent
+    FlightStatusComponent,
+    CafesComponent
   ],
   imports: [
     BrowserModule,

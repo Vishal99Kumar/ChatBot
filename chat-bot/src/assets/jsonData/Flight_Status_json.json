@@ -1,0 +1,182 @@
+[
+    {
+        "type": 0,
+        "event":"Departure",
+        "time": "20:20 PM",
+        "flight_no": "BG312",
+        "terminal": "Terminal 1",
+        "Destination": "Mumbai",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event":"Departure",
+        "time": "20:30 PM",
+        "flight_no": "NK312",
+        "terminal": "Terminal 2",
+        "Destination": "Sydney",
+        "status": "Delayed"
+    },
+    {
+        "type": 0,
+        "event":"Departure",
+        "time": "12:15 PM",
+        "flight_no": "CD215",
+        "terminal": "Terminal 3",
+        "Destination": "Chandigarh",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event":"Departure",
+        "time": "16:30 PM",
+        "flight_no": "LK623",
+        "terminal": "Terminal 1",
+        "Destination": "Muscat",
+        "status": "Delayed"
+    },
+    {
+        "type": 0,
+        "event":"Departure",
+        "time": "10:00 AM",
+        "flight_no": "PN501",
+        "terminal": "Terminal 2",
+        "Destination": "Ahmedabad",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event":"Departure",
+        "time": "22:30 PM",
+        "flight_no": "NP420",
+        "terminal": "Terminal 3",
+        "Destination": "Bangkok",
+        "status": "Delayed"
+    },
+    {
+        "type": 0,
+        "event":"Departure",
+        "time": "14:00 PM",
+        "flight_no": "HY124",
+        "terminal": "Terminal 1",
+        "Destination": "Hyderabad",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event":"Departure",
+        "time": "11:30 AM",
+        "flight_no": "SR329",
+        "terminal": "Terminal 2",
+        "Destination": "Abu Dhabi",
+        "status": "Cancelled"
+    },
+    {
+        "type": 0,
+        "event":"Departure",
+        "time": "19:10 PM",
+        "flight_no": "BH422",
+        "terminal": "Terminal 3",
+        "Destination": "Indore",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event":"Departure",
+        "time": "16:20 PM",
+        "flight_no": "VR523",
+        "terminal": "Terminal 1",
+        "Destination": "Dubai",
+        "status": "Delayed"
+    },
+    {
+        "type": 0,
+        "event":"Arrivals",
+        "time": "09:30 AM",
+        "flight_no": "JR456",
+        "terminal": "Terminal 1",
+        "Origin": "Bhopal",
+        "status": "On Time"
+    },
+    {
+        "type": 1,
+        "event":"Arrivals",
+        "time": "12:15 PM",
+        "flight_no": "BD789",
+        "terminal": "Terminal 2",
+        "Origin": "Hong Kong",
+        "status": "Delayed"
+    },
+    {
+        "type": 0,
+        "event":"Arrivals",
+        "time": "15:15 PM",
+        "flight_no": "GK123",
+        "terminal": "Terminal 3",
+        "Origin": "Goa",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event":"Arrivals",
+        "time": "18:30 PM",
+        "flight_no": "CM234",
+        "terminal": "Terminal 1",
+        "Origin": "Singapore",
+        "status": "On Time"
+    },
+    {
+        "type": 0,
+        "event":"Arrivals",
+        "time": "21:30 PM",
+        "flight_no": "HB567",
+        "terminal": "Terminal 2",
+        "Origin": "Hubli Airport",
+        "status": "Delayed"
+    },
+    {
+        "type": 1,
+        "event":"Arrivals",
+        "time": "23:30 PM",
+        "flight_no": "PG345",
+        "terminal": "Terminal 3",
+        "Origin": "Kathmandu",
+        "status": "Arrived"
+    },
+    {
+        "type": 0,
+        "event": "Arrivals",
+        "time": "08:45 AM",
+        "flight_no": "VT789",
+        "terminal": "Terminal 1",
+        "Origin": "Lucknow",
+        "status": "On Time"
+    },
+    {
+        "type": 1,
+        "event": "Arrivals",
+        "time": "10:00 AM",
+        "flight_no": "RT456",
+        "terminal": "Terminal 2",
+        "Origin": "Tokyo",
+        "status": "Delayed"
+    },
+    {
+        "type": 0,
+        "event": "Arrivals",
+        "time": "13:00 PM",
+        "flight_no": "SQ123",
+        "terminal": "Terminal 3",
+        "Origin": "Chennai",
+        "status": "Arrived"
+    },
+    {
+        "type": 1,
+        "event": "Arrivals",
+        "time": "15:45 PM",
+        "flight_no": "PL789",
+        "terminal": "Terminal 1",
+        "Origin": "Seoul",
+        "status": "On Time"
+    }
+]

@@ -27,6 +27,9 @@ export class MessageServiceService {
     return this.http.get(`${this.weatherApi}`);
   }
 
+  getJsonData(dataURL): Observable<any> {
+    return this.http.get<any>(dataURL);
+  }
 
 }
 

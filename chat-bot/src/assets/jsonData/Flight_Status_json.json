@@ -91,7 +91,7 @@
     },
     {
         "type": 0,
-        "event":"Arrivals",
+        "event":"Arrival",
         "time": "09:30 AM",
         "flight_no": "JR456",
         "terminal": "Terminal 1",
@@ -100,7 +100,7 @@
     },
     {
         "type": 1,
-        "event":"Arrivals",
+        "event":"Arrival",
         "time": "12:15 PM",
         "flight_no": "BD789",
         "terminal": "Terminal 2",
@@ -109,7 +109,7 @@
     },
     {
         "type": 0,
-        "event":"Arrivals",
+        "event":"Arrival",
         "time": "15:15 PM",
         "flight_no": "GK123",
         "terminal": "Terminal 3",
@@ -118,7 +118,7 @@
     },
     {
         "type": 1,
-        "event":"Arrivals",
+        "event":"Arrival",
         "time": "18:30 PM",
         "flight_no": "CM234",
         "terminal": "Terminal 1",
@@ -127,7 +127,7 @@
     },
     {
         "type": 0,
-        "event":"Arrivals",
+        "event":"Arrival",
         "time": "21:30 PM",
         "flight_no": "HB567",
         "terminal": "Terminal 2",
@@ -136,7 +136,7 @@
     },
     {
         "type": 1,
-        "event":"Arrivals",
+        "event":"Arrival",
         "time": "23:30 PM",
         "flight_no": "PG345",
         "terminal": "Terminal 3",
@@ -145,7 +145,7 @@
     },
     {
         "type": 0,
-        "event": "Arrivals",
+        "event": "Arrival",
         "time": "08:45 AM",
         "flight_no": "VT789",
         "terminal": "Terminal 1",
@@ -154,7 +154,7 @@
     },
     {
         "type": 1,
-        "event": "Arrivals",
+        "event": "Arrival",
         "time": "10:00 AM",
         "flight_no": "RT456",
         "terminal": "Terminal 2",
@@ -163,7 +163,7 @@
     },
     {
         "type": 0,
-        "event": "Arrivals",
+        "event": "Arrival",
         "time": "13:00 PM",
         "flight_no": "SQ123",
         "terminal": "Terminal 3",
@@ -172,7 +172,7 @@
     },
     {
         "type": 1,
-        "event": "Arrivals",
+        "event": "Arrival",
         "time": "15:45 PM",
         "flight_no": "PL789",
         "terminal": "Terminal 1",

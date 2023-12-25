@@ -1,5 +1,7 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MessageServiceService } from 'src/app/message-service.service';
 
 @Component({
   selector: 'app-flight-status',
@@ -8,7 +10,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FlightStatusComponent implements OnInit {
   statusForm:FormGroup;
-  constructor(private fb: FormBuilder){}
+  url = "../../../assets/jsonData/Flight_Status_json.json";
+  data:any;
+  filteredData: any;
+  displayedColumns: string[] = ['flight_no', 'time','status'];
+  dataSource:any;
+  isShowTable:any = false;
+  constructor(private fb: FormBuilder,
+    private Service: MessageServiceService,
+    private datePipe: DatePipe){}
 
   ngOnInit(): void {
     this.statusForm = this.fb.group({
@@ -17,6 +27,11 @@ export class FlightStatusComponent implements OnInit {
       SearchValue: [null],
       selectedOption: ['all'],
     });
+    this.Service.getJsonData(this.url).subscribe((res)=>{
+      this.data = res;
+      this.filteredData = this.data;
+    console.log(this.data);
+  })
   }
 
   // toggletype(value){
@@ -35,8 +50,39 @@ export class FlightStatusComponent implements OnInit {
       });
     }
   }
-  onSubmit(){
-    console.log(this.statusForm.value);
+  onSubmit() {
+    if (this.statusForm.valid) {
+      const state = this.statusForm.value.State;
+      const type = this.statusForm.value.type;
+      const searchValue = this.statusForm.value.SearchValue;
+      const selectedOption = this.statusForm.value.selectedOption;
+  
+      // Filter data based on the form values
+      this.filteredData = this.data.filter((item) => {
+        // Filter by state (Arrival/Departure)
+        const stateMatches = !state || item.event === state;
+  
+        // Filter by type (Domestic/International)
+        const typeMatches = !type || item.type === (type === 'Domestic' ? 0 : 1);
+  
+        // Filter by search value
+        const searchMatches = !searchValue || Object.values(item).some((val) =>
+          String(val).toLowerCase().includes(searchValue.toLowerCase())
+        );
+  
+        // Filter by selected option
+        const terminalMatches = !selectedOption || selectedOption === 'all' || item.terminal === 'Terminal ' + selectedOption;
+  
+        // Return true if all conditions are met
+        return stateMatches && typeMatches && (!searchValue || searchMatches) && terminalMatches;
+      });
+  
+      //console.log(this.filteredData);
+      this.dataSource = this.filteredData;
+    }
   }
-  onExtraClick(){}
+  
+  onExtraClick(){
+    this.isShowTable = true;
+  }
 }

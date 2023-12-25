@@ -19,8 +19,38 @@
                 <mat-option value="all">All Terminal</mat-option>
                 <mat-option value="1">Terminal 1</mat-option>
                 <mat-option value="2">Terminal 2</mat-option>
+                <mat-option value="3">Terminal 2</mat-option>
             </mat-select>
         </mat-form-field>
           <button mat-raised-button color="primary" type="submit" (click)="onExtraClick()">Find your flight</button>
     </form>
+
+    <ng-container *ngIf="isShowTable">
+      <div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            
+              <!-- flight_no Column -->
+              <ng-container matColumnDef="flight_no">
+                <th mat-header-cell *matHeaderCellDef> Flight No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.flight_no}} </td>
+              </ng-container>
+            
+              <!-- time Column -->
+              <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef> Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+              </ng-container>
+
+              <!-- status Column -->
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+              </ng-container>
+                      
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+      </div>
+  </ng-container>
+
 </div>

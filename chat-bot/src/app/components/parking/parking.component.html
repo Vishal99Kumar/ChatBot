@@ -110,7 +110,7 @@
                   </mat-radio-group>
                   <div class="internalbuttons">
                     <button mat-raised-button color="primary" (click)="nextStep('Fourth')">Back</button>
-                    <button mat-raised-button color="primary" type="submit" [disabled]="parkingForm.get('checkOutTime').value == null">Check Availability</button>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="parkingForm.get('checkOutTime').value == null" (click)="onExtraClick()">Check Availability</button>
                 </div>           
         </ng-container>
     </ng-container>

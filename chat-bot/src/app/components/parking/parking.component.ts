@@ -73,8 +73,7 @@ export class ParkingComponent implements OnInit {
   }
 
   onSubmit(){
-    this.isShowTable = true;
-    console.log(this.parkingForm.value);
+    //console.log(this.parkingForm.value);
     const checkInDateTime = new Date(this.parkingForm.value.checkinDate);
   const checkOutDateTime = new Date(this.parkingForm.value.checkOutDate);
 
@@ -101,5 +100,10 @@ export class ParkingComponent implements OnInit {
     } else {
       return (hours % 12) + 12;
     }
+  }
+
+  onExtraClick(){
+    console.log("called");
+    this.isShowTable = true;
   }
 }

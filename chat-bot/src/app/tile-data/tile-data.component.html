@@ -2,6 +2,7 @@
 <ng-container [ngSwitch]="tileClicked">
     <ng-container *ngSwitchCase="'Status'">
         <p>Status is working fine</p>
+        <app-flight-status style="width: 100%;"></app-flight-status>
     </ng-container>
     <ng-container *ngSwitchCase="'Lost'">
         <p>Lost is working fine</p>
@@ -25,9 +26,9 @@
                 <mat-form-field>
                     <mat-label>Select an option</mat-label>
                     <mat-select formControlName="selectedOption" disableRipple>
-                        <mat-option value="1">Option 1</mat-option>
-                        <mat-option value="2">Option 2</mat-option>
-                        <mat-option value="3">Option 3</mat-option>
+                        <mat-option value="1">Terminal 1</mat-option>
+                        <mat-option value="2">Terminal 2</mat-option>
+                        <mat-option value="3">Terminal 3</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -39,9 +40,7 @@
     </ng-container>
     <ng-container *ngSwitchCase="'Waiting'">
         <p>Waiting is working fine</p>
-        <div class="test">
         <app-relax style="width: 100%;"></app-relax>
-    </div>
     </ng-container>
     <ng-container *ngSwitchCase="'Cab'">
         <p>Cab is working fine</p>

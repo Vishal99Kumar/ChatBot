@@ -1,0 +1,10 @@
+.outerStatus{
+    display: flex;
+    flex-direction: column;
+}
+.internalbuttons{
+    flex-direction: row;
+}
+.selected{
+    background-color: #faa71b;
+}

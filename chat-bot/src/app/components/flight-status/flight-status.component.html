@@ -1,0 +1,24 @@
+<div class="outerStatus">
+    <form [formGroup]="statusForm" (ngSubmit)="onSubmit()">
+        <div class="internalbuttons">
+            <button mat-raised-button class="buttonChange" [class.selected]="statusForm.get('State').value === 'Arrival'"
+             (click)="togglestatus('Arrival')">Arrival</button>
+            <button mat-raised-button class="buttonChange" [class.selected]="statusForm.get('State').value === 'Departure'"
+             (click)="togglestatus('Departure')">Departure</button>
+            </div>
+        <mat-radio-group aria-label="Select an option" formControlName="type">
+            <mat-radio-button value="Domestic">Domestic</mat-radio-button>
+            <mat-radio-button value="International">International</mat-radio-button>
+          </mat-radio-group>
+          <input matInput type="text" placeholder="Search" formControlName="SearchValue">
+          <mat-form-field>
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="selectedOption" disableRipple>
+                <mat-option value="all">All Terminal</mat-option>
+                <mat-option value="1">Terminal 1</mat-option>
+                <mat-option value="2">Terminal 2</mat-option>
+            </mat-select>
+        </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" (click)="onExtraClick()">Find your flight</button>
+    </form>
+</div>

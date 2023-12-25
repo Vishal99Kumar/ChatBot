@@ -16,6 +16,7 @@ export class FlightStatusComponent implements OnInit {
   displayedColumns: string[] = ['flight_no', 'time','status'];
   dataSource:any;
   isShowTable:any = false;
+  isShowErrorMessage:any = false;
   constructor(private fb: FormBuilder,
     private Service: MessageServiceService,
     private datePipe: DatePipe){}
@@ -30,7 +31,7 @@ export class FlightStatusComponent implements OnInit {
     this.Service.getJsonData(this.url).subscribe((res)=>{
       this.data = res;
       this.filteredData = this.data;
-    console.log(this.data);
+    //console.log(this.data);
   })
   }
 
@@ -79,6 +80,10 @@ export class FlightStatusComponent implements OnInit {
   
       //console.log(this.filteredData);
       this.dataSource = this.filteredData;
+      if(this.filteredData.length == 0){
+        this.isShowTable = false;
+        this.isShowErrorMessage=true;
+      }
     }
   }
   

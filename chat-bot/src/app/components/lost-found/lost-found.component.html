@@ -30,6 +30,12 @@
     </div>
 </form>
 
+<ng-container *ngIf="isShowErrorMessage">
+    <div class="errorClass">
+      <span>No data to display for the selected date.</span>
+    </div>
+    </ng-container>
+
 <ng-container *ngIf="isShowTable">
     <div>
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">

@@ -33,7 +33,7 @@ export class TileDataComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       // Perform actions with the form data
-      console.log(this.form.value);
+      //console.log(this.form.value);
     }
   }
 

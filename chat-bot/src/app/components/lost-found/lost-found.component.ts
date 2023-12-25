@@ -16,6 +16,7 @@ export class LostFoundComponent implements OnInit {
   displayedColumns: string[] = ['Property_Details', 'Contact_Mob'];
   dataSource:any;
   isShowTable:any = false;
+  isShowErrorMessage:any = false;
   
   constructor(private Service: MessageServiceService,
     private fb: FormBuilder,private datePipe: DatePipe){}
@@ -54,8 +55,16 @@ export class LostFoundComponent implements OnInit {
         return itemMatches && dateMatches && terminalMatches;
       });
       this.dataSource = filteredData;
-      this.isShowTable = true;
-      //console.log(filteredData);
+      
+      if(filteredData.length == 0){
+        //console.log(filteredData.length,"inner");
+        this.isShowTable = false;
+        this.isShowErrorMessage=true;
+      }
+      else{
+        this.isShowTable = true;
+      }
+      //console.log(filteredData.length);
     }
   }  
   

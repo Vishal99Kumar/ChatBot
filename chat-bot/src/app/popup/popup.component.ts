@@ -76,7 +76,7 @@ scrollToBottom(): void {
   try {
     this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight + "px";
   } catch (err) {
-    console.error(err);
+    //console.error(err);
   }
 }
 }

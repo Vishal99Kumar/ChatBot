@@ -103,7 +103,7 @@ export class ParkingComponent implements OnInit {
   }
 
   onExtraClick(){
-    console.log("called");
+    //console.log("called");
     this.isShowTable = true;
   }
 }

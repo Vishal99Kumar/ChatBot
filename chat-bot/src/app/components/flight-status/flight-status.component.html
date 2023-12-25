@@ -1,5 +1,6 @@
 <div class="outerStatus">
     <form [formGroup]="statusForm" (ngSubmit)="onSubmit()">
+      <div class="stylling">
         <div class="internalbuttons">
             <button mat-raised-button class="buttonChange" [class.selected]="statusForm.get('State').value === 'Arrival'"
              (click)="togglestatus('Arrival')">Arrival</button>
@@ -23,8 +24,14 @@
             </mat-select>
         </mat-form-field>
           <button mat-raised-button color="primary" type="submit" (click)="onExtraClick()">Find your flight</button>
+        </div>
     </form>
 
+    <ng-container *ngIf="isShowErrorMessage">
+      <div class="errorClass">
+        <span>No data to display for the selected date.</span>
+      </div>
+    </ng-container>
     <ng-container *ngIf="isShowTable">
       <div>
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">

@@ -8,3 +8,12 @@
 .selected{
     background-color: #faa71b;
 }
+.stylling
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.errorClass{
+    color: red;
+}

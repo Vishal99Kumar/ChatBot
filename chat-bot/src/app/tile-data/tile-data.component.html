@@ -1,19 +1,15 @@
 <div class="tileContainer">
 <ng-container [ngSwitch]="tileClicked">
     <ng-container *ngSwitchCase="'Status'">
-        <p>Status is working fine</p>
         <app-flight-status style="width: 100%;"></app-flight-status>
     </ng-container>
     <ng-container *ngSwitchCase="'Lost'">
-        <p>Lost is working fine</p>
         <app-lost-found style="width: 100%;"></app-lost-found>
     </ng-container>
     <ng-container *ngSwitchCase="'Waiting'">
-        <p>Waiting is working fine</p>
         <app-relax style="width: 100%;"></app-relax>
     </ng-container>
     <ng-container *ngSwitchCase="'Cab'">
-        <p>Cab is working fine</p>
         <mat-accordion>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
@@ -91,7 +87,6 @@
 
     </ng-container>
     <ng-container *ngSwitchCase="'Immigration'">
-        <p>Immigration is working fine</p>
         <mat-accordion>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
@@ -193,23 +188,40 @@
         <app-parking  style="width: 90%;"></app-parking>
     </ng-container>
     <ng-container *ngSwitchCase="'Cafes'">
-        <p>Cafes is working fine</p>
         <app-cafes style="width: 100%;"></app-cafes>
     </ng-container>
     <ng-container *ngSwitchCase="'Medical'">
         <h1>Medical Facilities</h1>
         <p>The medical center is open for passengers and the public. Our Medical center serves as a travel clinic -
             24/7.</p>
-        <mat-tab-group animationDuration="2000ms">
-            <mat-tab label="Terminal 1">Domestic Arrivals</mat-tab>
-            <mat-tab label="Terminal 2">
-                <p> 1 Medanta Centre in Check-in area.</p>
-                <p>1 Fully equipped Medanta Health Center in Arrival Forecourt with excellent facilities and medical
-                    equipment and to shift patients to city hospitals if required.</p>
-            </mat-tab>
-            <mat-tab label="Terminal 3"> 4 Medanta Centers located at Domestic Pier/ International Pier, Transfer Area &
-                Food Court</mat-tab>
-        </mat-tab-group>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Terminal 1
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <span>Domestic Arrivals</span>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Terminal 2
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p> 1 Medanta Centre in Check-in area.</p>
+                    <p>1 Fully equipped Medanta Health Center in Arrival Forecourt with excellent facilities and medical
+                        equipment and to shift patients to city hospitals if required.</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Terminal 3
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <span>4 Medanta Centers located at Domestic Pier/ International Pier, Transfer Area & Food Court</span>
+                </mat-expansion-panel>
+            </mat-accordion>
     </ng-container>
     <ng-container *ngSwitchCase="'Weather'">
         <app-weather></app-weather>

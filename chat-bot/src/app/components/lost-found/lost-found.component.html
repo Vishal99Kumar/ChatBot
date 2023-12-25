@@ -1,0 +1,55 @@
+<div class="lostOuterContainer">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name of Item" formControlName="lostItem">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>MM/DD/YYYY</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="lostDate" (click)="picker.open()">
+            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="selectedOption" disableRipple>
+                <mat-option value="all">All Terminal</mat-option>
+                <mat-option value="T1">Terminal 1</mat-option>
+                <mat-option value="T2">Terminal 2</mat-option>
+                <mat-option value="T3">Terminal 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button type="submit">ok</button>
+    </div>
+</form>
+
+<ng-container *ngIf="isShowTable">
+    <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+            <!-- Property_Details Column -->
+            <ng-container matColumnDef="Property_Details">
+              <th mat-header-cell *matHeaderCellDef> Details </th>
+              <td mat-cell *matCellDef="let element"> {{element.Property_Details}} </td>
+            </ng-container>
+          
+            <!-- Contact_Mob Column -->
+            <ng-container matColumnDef="Contact_Mob">
+              <th mat-header-cell *matHeaderCellDef> Contact_Mob </th>
+              <td mat-cell *matCellDef="let element"> {{element.Contact_Mob}} </td>
+            </ng-container>
+                    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</ng-container>
+
+</div>

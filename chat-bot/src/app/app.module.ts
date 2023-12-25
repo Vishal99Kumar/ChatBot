@@ -37,6 +37,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import { RelaxComponent } from './components/relax/relax.component';
 import { FlightStatusComponent } from './components/flight-status/flight-status.component';
 import { CafesComponent } from './components/cafes/cafes.component';
+import { LostFoundComponent } from './components/lost-found/lost-found.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,8 @@ import { CafesComponent } from './components/cafes/cafes.component';
     ParkingComponent,
     RelaxComponent,
     FlightStatusComponent,
-    CafesComponent
+    CafesComponent,
+    LostFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,8 @@ import { CafesComponent } from './components/cafes/cafes.component';
     MatInputModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableModule
   ],
   providers: [DataShareService,MessageServiceService,DatePipe],
   bootstrap: [AppComponent],

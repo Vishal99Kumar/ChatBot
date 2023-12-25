@@ -8,10 +8,12 @@
             <button mat-raised-button class="buttonChange" [ngClass]="{'selected': parkingForm.get('Terminal').value === 'Terminal 3'}">Terminal 3</button>
             <span>Travellers Type</span>
             <div class="internalbuttons">
+                <div class="buttonStyling">
             <button mat-raised-button class="buttonChange" [class.selected]="parkingForm.get('type').value === 'Domestic'"
-             (click)="toggleTyped()">Domestic</button>
+             (click)="toggleTyped()">Domestic</button></div>
+             <div class="buttonStyling">
             <button mat-raised-button class="buttonChange" [class.selected]="parkingForm.get('type').value === 'International'"
-             (click)="toggleTypei()">International</button>
+             (click)="toggleTypei()">International</button></div>
             </div>
             <button mat-raised-button color="primary" (click)="nextStep('Second')">Continue</button>
         </ng-container>
@@ -24,8 +26,10 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <div class="internalbuttons">
-            <button mat-raised-button color="primary" (click)="nextStep('First')">Back</button>
-            <button mat-raised-button color="primary" (click)="nextStep('Third')" [disabled]="parkingForm.get('checkinDate').value == null">Continue</button>
+                <div class="buttonStyling">
+            <button mat-raised-button color="primary" (click)="nextStep('First')">Back</button></div>
+            <div class="buttonStyling">
+            <button mat-raised-button color="primary" (click)="nextStep('Third')" [disabled]="parkingForm.get('checkinDate').value == null">Continue</button></div>
         </div>
         </ng-container>
         <ng-container *ngSwitchCase="'Third'">
@@ -60,8 +64,10 @@
                 <mat-radio-button value="PM" (click)="toggleInAMPM('PM')">PM</mat-radio-button>
               </mat-radio-group>
             <div class="internalbuttons">
-                <button mat-raised-button color="primary" (click)="nextStep('Second')">Back</button>
-                <button mat-raised-button color="primary" (click)="nextStep('Fourth')" [disabled]="parkingForm.get('checkInTime').value == null">Continue</button>
+                <div class="buttonStyling">
+                <button mat-raised-button color="primary" (click)="nextStep('Second')">Back</button></div>
+                <div class="buttonStyling">
+                <button mat-raised-button color="primary" (click)="nextStep('Fourth')" [disabled]="parkingForm.get('checkInTime').value == null">Continue</button></div>
             </div>
         </ng-container>
         <ng-container *ngSwitchCase="'Fourth'">
@@ -73,8 +79,10 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <div class="internalbuttons">
-                <button mat-raised-button color="primary" (click)="nextStep('Third')">Back</button>
-                <button mat-raised-button color="primary" (click)="nextStep('Fifth')" [disabled]="parkingForm.get('checkOutDate').value == null">Continue</button>
+                <div class="buttonStyling">
+                <button mat-raised-button color="primary" (click)="nextStep('Third')">Back</button></div>
+                <div class="buttonStyling">
+                <button mat-raised-button color="primary" (click)="nextStep('Fifth')" [disabled]="parkingForm.get('checkOutDate').value == null">Continue</button></div>
             </div>
         </ng-container>
         <ng-container *ngSwitchCase="'Fifth'">
@@ -109,8 +117,10 @@
                     <mat-radio-button value="PM" (click)="toggleOutAMPM('PM')">PM</mat-radio-button>
                   </mat-radio-group>
                   <div class="internalbuttons">
-                    <button mat-raised-button color="primary" (click)="nextStep('Fourth')">Back</button>
-                    <button mat-raised-button color="primary" type="submit" [disabled]="parkingForm.get('checkOutTime').value == null" (click)="onExtraClick()">Check Availability</button>
+                    <div class="buttonStyling">
+                    <button mat-raised-button color="primary" (click)="nextStep('Fourth')">Back</button></div>
+                    <div class="buttonStyling extra">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="parkingForm.get('checkOutTime').value == null" (click)="onExtraClick()">Check Availability</button></div>
                 </div>           
         </ng-container>
     </ng-container>
@@ -118,8 +128,8 @@
 <ng-container *ngIf="isShowTable">
 <div class="formlook">
     <div>
-        <span>Traveller</span>
-        <span>{{parkingForm.value.type}}</span>
+        <span class="left">Traveller</span>
+        <span class="right">{{parkingForm.value.type}}</span>
     </div>
     <div>
         <span>Check In Time</span>

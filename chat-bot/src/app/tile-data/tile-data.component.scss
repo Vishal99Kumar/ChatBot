@@ -6,3 +6,20 @@
     justify-content: center;
     align-items: center;
 }
+
+.OuterStyllingCss{
+padding: 2rem;
+}
+.OuterStyllingCssnew{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.extrapadd{
+    padding: 0 1rem 0 1rem;
+}
+ul{
+    padding: 0rem;
+    list-style: none;
+}

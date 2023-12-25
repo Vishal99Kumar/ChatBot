@@ -1,4 +1,5 @@
 .outerCafe{
+  padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,6 +14,8 @@
     text-decoration: none;
     color: inherit;
     position: relative;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
   }
   
   .card-image-overlay {

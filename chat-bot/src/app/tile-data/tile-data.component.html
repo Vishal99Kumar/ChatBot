@@ -14,6 +14,7 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
+                        <mat-icon>subway</mat-icon>&nbsp;
                         Metro / Airport Express
                     </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -31,6 +32,7 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
+                        <mat-icon>departure_board</mat-icon>&nbsp;
                         Bus
                     </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -47,6 +49,7 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
+                        <mat-icon>local_taxi</mat-icon>&nbsp;
                         Taxi / Cabs
                     </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -70,6 +73,7 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
+                        <mat-icon>train</mat-icon>&nbsp;
                         Trains
                     </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -173,6 +177,7 @@
         </mat-accordion>
     </ng-container>
     <ng-container *ngSwitchCase="'Cargo'">
+        <div class="OuterStyllingCss">
         <h1>Welcome to India’s Largest Cargo Handling Airport</h1>
         <p>Located in the capital city of India, Indira Gandhi International Airport (IGIA) in Delhi is the preferred
             Air Cargo Hub of India due to its strategic location, hosting elaborate infrastructure and efficient air
@@ -183,6 +188,7 @@
             freighter airlines.</p>
         <p>For more details visit <a href="https://www.newdelhiairport.in/cargo#overview" target="_blank">Click Here</a>
         </p>
+    </div>
     </ng-container>
     <ng-container *ngSwitchCase="'Parking'">
         <app-parking  style="width: 90%;"></app-parking>
@@ -191,8 +197,9 @@
         <app-cafes style="width: 100%;"></app-cafes>
     </ng-container>
     <ng-container *ngSwitchCase="'Medical'">
+        <div class="OuterStyllingCssnew">
         <h1>Medical Facilities</h1>
-        <p>The medical center is open for passengers and the public. Our Medical center serves as a travel clinic -
+        <p class="extrapadd">The medical center is open for passengers and the public. Our Medical center serves as a travel clinic -
             24/7.</p>
             <mat-accordion>
                 <mat-expansion-panel>
@@ -201,6 +208,7 @@
                             Terminal 1
                         </mat-panel-title>
                     </mat-expansion-panel-header>
+                    <mat-icon>location_on</mat-icon>&nbsp;
                     <span>Domestic Arrivals</span>
                 </mat-expansion-panel>
                 <mat-expansion-panel>
@@ -209,9 +217,15 @@
                             Terminal 2
                         </mat-panel-title>
                     </mat-expansion-panel-header>
-                    <p> 1 Medanta Centre in Check-in area.</p>
-                    <p>1 Fully equipped Medanta Health Center in Arrival Forecourt with excellent facilities and medical
-                        equipment and to shift patients to city hospitals if required.</p>
+                    <ul>
+                        <li><mat-icon>location_on</mat-icon>&nbsp;
+                            <span> 1 Medanta Centre in Check-in area.</span></li>
+                        <li><mat-icon>location_on</mat-icon>&nbsp;
+                            <span>1 Fully equipped Medanta Health Center in Arrival Forecourt with excellent facilities and medical
+                                equipment and to shift patients to city hospitals if required.</span></li>
+                    </ul>
+                    
+                    
                 </mat-expansion-panel>
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -219,9 +233,11 @@
                             Terminal 3
                         </mat-panel-title>
                     </mat-expansion-panel-header>
+                    <mat-icon>location_on</mat-icon>&nbsp;
                     <span>4 Medanta Centers located at Domestic Pier/ International Pier, Transfer Area & Food Court</span>
                 </mat-expansion-panel>
             </mat-accordion>
+        </div>
     </ng-container>
     <ng-container *ngSwitchCase="'Weather'">
         <app-weather></app-weather>

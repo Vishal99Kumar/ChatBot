@@ -13,7 +13,7 @@
 }
 
 .weather__datetime {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 14px;
 }
 
@@ -46,14 +46,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .weather__card {
     display: flex;
     align-items: center;
     background: #c4bebe;
-    padding: 1rem;
+    padding: 0.67rem;
     border-radius: 10px;
 }
 

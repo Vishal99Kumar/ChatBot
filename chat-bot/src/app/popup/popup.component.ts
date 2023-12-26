@@ -2,11 +2,13 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { DataShareService } from '../data-share.service';
 import { MessageServiceService } from '../message-service.service';
+import { DatePipe } from '@angular/common';
 
 interface messageBody {
   id: number;
   text: string;
   origin: string;
+  timestamp: string;
 }
 @Component({
   selector: 'app-popup',
@@ -22,7 +24,8 @@ export class PopupComponent implements OnInit {
   typingGif: boolean = false;
   isInnerTileShown:boolean = false;
   isReadOnly:boolean = false;
-  constructor(
+  timeStamp:any;
+  constructor(private datePipe: DatePipe,
     private msg: MessageServiceService,
     private dialogRef: MatDialogRef<PopupComponent>,
     private dataService: DataShareService){
@@ -47,6 +50,7 @@ export class PopupComponent implements OnInit {
   }
 
   sendMessage() {
+    this.timeStamp = this.datePipe.transform(new Date(), 'shortTime');
     this.isReadOnly = true;
     this.dataService.updateInternalVariable("nothing");
     this.typingGif = true;
@@ -55,6 +59,7 @@ export class PopupComponent implements OnInit {
       id: this.messages.length + 1,
       text: this.message,
       origin: 'me',
+      timestamp: this.timeStamp,
     });
     this.scrollToBottom();
     this.display = false;
@@ -67,6 +72,7 @@ export class PopupComponent implements OnInit {
         id: this.messages.length + 1,
         text: this.responseOnServer,
         origin: 'Server',
+        timestamp: this.timeStamp,
       });
       this.scrollToBottom();
       this.typingGif = false;

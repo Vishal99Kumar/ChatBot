@@ -28,6 +28,7 @@
                   [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
                   *ngFor="let message of messages">
                   <span class="displayMessage">{{ message.text }}</span>
+                  <span class="timestamp">{{ message.timestamp }}</span>
               </li>
           </ul>
       </div>

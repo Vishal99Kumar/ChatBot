@@ -37,7 +37,7 @@
   <div class="footer footerExclusive">
     <form (ngSubmit)="sendMessage()" class="message-input-form">
       <div class="inputbox">
-    <input type="text" id="message" name="message" autocomplete="off" [(ngModel)]="message" placeholder="Chat with AI Chatbot">
+    <input type="text" id="message" name="message" [readonly]="isReadOnly" autocomplete="off" [(ngModel)]="message" placeholder="Chat with AI Chatbot">
   </div>
   <div>
      <button mat-icon-button class="example-icon">

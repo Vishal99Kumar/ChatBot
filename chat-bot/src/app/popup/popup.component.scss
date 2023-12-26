@@ -169,7 +169,7 @@ ul {
   flex: 1;
 }
 .displayMessage{
-  //word-break: break-all;
+  word-break: break-word;
   white-space: break-spaces;
   display: flex;
   text-align: left;

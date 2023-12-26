@@ -21,6 +21,7 @@ export class PopupComponent implements OnInit {
   display: boolean = true;
   typingGif: boolean = false;
   isInnerTileShown:boolean = false;
+  isReadOnly:boolean = false;
   constructor(
     private msg: MessageServiceService,
     private dialogRef: MatDialogRef<PopupComponent>,
@@ -46,6 +47,7 @@ export class PopupComponent implements OnInit {
   }
 
   sendMessage() {
+    this.isReadOnly = true;
     this.dataService.updateInternalVariable("nothing");
     this.typingGif = true;
     if (this.message && this.message.trim() !== '') {
@@ -68,6 +70,7 @@ export class PopupComponent implements OnInit {
       });
       this.scrollToBottom();
       this.typingGif = false;
+      this.isReadOnly = false;
     });
     this.message = '';
   }

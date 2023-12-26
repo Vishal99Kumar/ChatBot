@@ -90,14 +90,15 @@ scrollToBottom(): void {
   }
 }
 
-toggleColor(value){
+toggleColor(value,valu2){
   if(value == "red")
   {
-    this.tempColor = "red";
+    this.tempColor = "red"+valu2;
   }
   else{
-    this.tempColor = "green";
+    this.tempColor = "green"+valu2;
   }
+  console.log(this.tempColor);
 }
 
 }

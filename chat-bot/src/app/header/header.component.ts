@@ -18,12 +18,12 @@ export class HeaderComponent {
     this.dataService.updatecloseHeader(true);
     const dialogRef = this.dialog.open(LoginComponent, {
       // height: '400px',
-      width: '400px',
+      width: '430px',
       position: { bottom: '10px' },
       panelClass: ["popupClass", 'animate__animated','animate__slideInUp'],
       backdropClass: "internalBlurClass",
       autoFocus: true,
-      maxWidth: "30vw",
+      maxWidth: "31vw",
       minWidth: "30vw",
       disableClose: true
     });

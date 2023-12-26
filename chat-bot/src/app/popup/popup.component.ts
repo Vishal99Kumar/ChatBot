@@ -20,7 +20,7 @@ export class PopupComponent implements OnInit {
   message: string = '';
   messages: messageBody[] = [];
   responseOnServer: string = '';
-  display: boolean = true;
+  display: boolean;
   typingGif: boolean = false;
   isInnerTileShown:boolean = false;
   isReadOnly:boolean = false;
@@ -30,11 +30,11 @@ export class PopupComponent implements OnInit {
     private dialogRef: MatDialogRef<PopupComponent>,
     private dataService: DataShareService){
       this.dataService.sharedVariable$.subscribe((value) => {
-        if (value) {
+        
           this.display = value;
           this.messages = [];
-        }
-        //console.log(this.display);
+        
+        //console.log(this.display,"popup");
       });
     }
   ngOnInit(): void {
@@ -52,7 +52,7 @@ export class PopupComponent implements OnInit {
   sendMessage() {
     this.timeStamp = this.datePipe.transform(new Date(), 'shortTime');
     this.isReadOnly = true;
-    this.dataService.updateInternalVariable("nothing");
+    //this.dataService.updateInternalVariable("nothing");
     this.typingGif = true;
     if (this.message && this.message.trim() !== '') {
     this.messages.push({

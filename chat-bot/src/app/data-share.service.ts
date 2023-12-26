@@ -8,11 +8,11 @@ export class DataShareService {
 
   constructor() { }
 
-  private sharedVariableSubject = new BehaviorSubject<any>(null);
+  private sharedVariableSubject = new BehaviorSubject<any>(true);
   sharedVariable$ = this.sharedVariableSubject.asObservable();
 
   updateSharedVariable(newValue: any) {
-    this.sharedVariableSubject.next(newValue);
+        this.sharedVariableSubject.next(newValue);
   }
 
   private showInternalTile = new BehaviorSubject<any>("nothing");

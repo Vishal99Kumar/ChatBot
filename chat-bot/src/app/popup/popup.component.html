@@ -5,16 +5,17 @@
   </div>
 <div class="outerclass">
   <div class="header"><app-header></app-header></div>
-  <ng-container *ngIf="isInnerTileShown"><div class="main-content">
+  <!-- <ng-container *ngIf="isInnerTileShown"><div class="main-content">
     <div class="specific"><app-tile-data style="width: 100%;"></app-tile-data></div></div></ng-container>
-  <ng-container *ngIf="!isInnerTileShown">
+   -->
   <div class="main-content">
     <div *ngIf="display" class="details">
       <app-dashboard> </app-dashboard>
   </div>
     <div *ngIf="!display" class="chat-window-display">
-      <div #chatContainer class="chat-session">
+              <div #chatContainer class="chat-session">
           <ul class="message-list">
+            <ng-container *ngIf="isInnerTileShown"><app-tile-data style="width: 100%;"></app-tile-data></ng-container>
             <ng-container *ngIf = "typingGif == true">
               <div class="typer user-message displayMessage left-message">
                 <div class="divtyperHandling">
@@ -32,9 +33,8 @@
               </li>
           </ul>
       </div>
+      </div>
   </div>
-  </div>
-</ng-container>
   <div class="footer footerExclusive">
     <form (ngSubmit)="sendMessage()" class="message-input-form">
       <div class="inputbox">

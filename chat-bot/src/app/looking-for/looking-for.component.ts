@@ -10,6 +10,7 @@ import { LoginComponent } from '../login/login.component';
 })
 export class LookingForComponent implements OnInit {
   shouldHeaderClose:boolean = false;
+  Display:boolean = false;
 
   constructor(private dataService: DataShareService,
     public dialog: MatDialogRef<LoginComponent>){}
@@ -21,7 +22,8 @@ export class LookingForComponent implements OnInit {
   }
 
   TileClick(value:string)
-  {
+  {//console.log("called",this.Display)
+  this.dataService.updateSharedVariable(false);
     if(this.shouldHeaderClose)
     {
     this.dialog.close();

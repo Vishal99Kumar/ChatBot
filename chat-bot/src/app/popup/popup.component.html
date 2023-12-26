@@ -29,12 +29,13 @@
                   [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
                   *ngFor="let message of messages; let i = index">
                   <span class="displayMessage">{{ message.text }}</span>
+                  <div class="oneLiner">
                   <span class="timestamp">{{ message.timestamp }}</span>
                   <mat-icon *ngIf="message?.['origin'] != 'me'"class="btn" (click)="toggleColor('green',i)" 
                     [ngClass] = "{'greenLike': tempColor == ('green'+i)}">thumb_up</mat-icon>
                   <mat-icon *ngIf="message?.['origin'] != 'me'"class="btn" (click)="toggleColor('red',i)"
                   [ngClass] = "{'redDislike': tempColor == ('red'+i)}">thumb_down</mat-icon>
-
+                </div>
               </li>
           </ul>
       </div>

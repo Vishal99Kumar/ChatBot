@@ -30,6 +30,11 @@
                   *ngFor="let message of messages">
                   <span class="displayMessage">{{ message.text }}</span>
                   <span class="timestamp">{{ message.timestamp }}</span>
+                  <mat-icon *ngIf="message?.['origin'] != 'me'"class="btn" (click)="toggleColor('green')" 
+                    [ngClass] = "{'greenLike': tempColor == 'green'}">thumb_up</mat-icon>
+                  <mat-icon *ngIf="message?.['origin'] != 'me'"class="btn" (click)="toggleColor('red')"
+                  [ngClass] = "{'redDislike': tempColor == 'red'}">thumb_down</mat-icon>
+
               </li>
           </ul>
       </div>

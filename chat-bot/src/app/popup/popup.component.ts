@@ -25,6 +25,7 @@ export class PopupComponent implements OnInit {
   isInnerTileShown:boolean = false;
   isReadOnly:boolean = false;
   timeStamp:any;
+  tempColor:any;
   constructor(private datePipe: DatePipe,
     private msg: MessageServiceService,
     private dialogRef: MatDialogRef<PopupComponent>,
@@ -88,4 +89,15 @@ scrollToBottom(): void {
     //console.error(err);
   }
 }
+
+toggleColor(value){
+  if(value == "red")
+  {
+    this.tempColor = "red";
+  }
+  else{
+    this.tempColor = "green";
+  }
+}
+
 }

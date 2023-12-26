@@ -52,6 +52,7 @@ export class FlightStatusComponent implements OnInit {
     }
   }
   onSubmit() {
+    this.isShowErrorMessage = false;
     if (this.statusForm.valid) {
       const state = this.statusForm.value.State;
       const type = this.statusForm.value.type;

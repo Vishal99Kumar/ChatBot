@@ -34,6 +34,7 @@ export class LostFoundComponent implements OnInit {
   }
 
   onSubmit() {
+    this.isShowErrorMessage = false;
     if (this.form.valid) {
       const lostItem = this.form.value.lostItem;
       const lostDate = this.datePipe.transform(this.form.value.lostDate, 'dd/MM/yyyy');

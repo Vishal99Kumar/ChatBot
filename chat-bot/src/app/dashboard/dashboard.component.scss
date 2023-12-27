@@ -119,3 +119,10 @@
     margin-top: 10px;
   }
   //div 3 ends here
+
+  .parkContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

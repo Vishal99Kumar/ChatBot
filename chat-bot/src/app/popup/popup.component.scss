@@ -219,6 +219,7 @@ ul {
 /// /////////////////typing gif ends
 
 .details{
+  width: 100%;
   display: flex;
 }
 
@@ -266,4 +267,18 @@ ul {
 .timestamp {
   font-size: 10px;
   color: #000000; // Adjust the color as needed
+}
+
+.greenLike{
+  color: green;
+}
+
+.redDislike{
+  color: red;
+}
+
+.oneLiner{
+  display: flex;
+    align-items: center;
+    gap: 8px;
 }

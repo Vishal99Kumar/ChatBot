@@ -1,52 +1,58 @@
 <div class="parentcontainer">
-<div class="one welcome-text">
+  <div class="one welcome-text">
     <h2>Welcome</h2>
     <p>Delhi Airport Chatbot Services</p>
   </div>
 
-<div class="two"><app-looking-for></app-looking-for></div>
+  <div class="two"><app-looking-for></app-looking-for></div>
 
-<div class="three">
-    <mat-accordion class="example-headers-align" multi>
-        <!-- #enddocregion multi -->
-        <mat-expansion-panel [expanded]="true">
-          <mat-expansion-panel-header class="ExpansionHeader" style="background-color: rgb(235, 238, 253); 
+  <div class="three" style="margin-top: 0.25rem;">
+    <mat-accordion class="example-headers-align" multi style="margin-top: 5rem;">
+      <!-- #enddocregion multi -->
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="ExpansionHeader" style="background-color: rgb(235, 238, 253); 
                     height: 3vh; padding: 1vw;">
-            <!-- <div class="my-panel"  (click)="$event.stopPropagation();"> -->
-            <h3 id="DropdownHeading">My Bookings !!!!</h3>
-            <!-- <button mat-stroked-button (click)="myButton()">my button</button> -->
-            <!-- </div> -->
-          </mat-expansion-panel-header>
+          <!-- <div class="my-panel"  (click)="$event.stopPropagation();"> -->
+          <h3 id="DropdownHeading">Flight Bookings</h3>
+          <!-- <button mat-stroked-button (click)="myButton()">my button</button> -->
+          <!-- </div> -->
+        </mat-expansion-panel-header>
+
+        <div class="VerifyContent"><span>Enter details for flight booking</span>
+        </div>
+
+        <!-- <div class="form-box"> -->
           <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="parkContainer">
             <mat-form-field>
               <input matInput type="text" placeholder="From" formControlName="fromItem">
               <mat-icon matPrefix>search</mat-icon>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput type="text" placeholder="To" formControlName="toItem">
-            <mat-icon matPrefix>search</mat-icon>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>MM/DD/YYYY</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="fromDate" (click)="picker.open()">
-          <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>MM/DD/YYYY</mat-label>
-        <input matInput [matDatepicker]="picker2" formControlName="toDate" (click)="picker2.open()">
-        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-    </mat-form-field>
-    <button mat-raised-button color="primary" id="DropdownButton" type="submit" 
-    [disabled]="isFormDisabled()">Book Here</button>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" placeholder="To" formControlName="toItem">
+              <mat-icon matPrefix>search</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>MM/DD/YYYY</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="fromDate" (click)="picker.open()">
+              <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>MM/DD/YYYY</mat-label>
+              <input matInput [matDatepicker]="picker2" formControlName="toDate" (click)="picker2.open()">
+              <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+              <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+            <button mat-raised-button color="primary" id="DropdownButton" type="submit"
+              [disabled]="isFormDisabled()">Book
+              Here</button>
           </form>
-          <div class="VerifyContent"><span>Please verify your Flight PNR to see your bookings</span>
-          </div>
-        </mat-expansion-panel>
-        </mat-accordion>
-</div>  
+        <!-- </div> -->
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 
 </div>

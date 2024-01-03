@@ -26,6 +26,7 @@ export class PopupComponent implements OnInit {
   isReadOnly:boolean = false;
   timeStamp:any;
   tempColor:any;
+  messagingStart : boolean = false;
   constructor(private datePipe: DatePipe,
     private msg: MessageServiceService,
     private dialogRef: MatDialogRef<PopupComponent>,
@@ -34,7 +35,9 @@ export class PopupComponent implements OnInit {
         
           this.display = value;
           this.messages = [];
-        
+          if(this.display){
+            this.messagingStart=false;
+          }
         //console.log(this.display,"popup");
       });
     }
@@ -51,6 +54,7 @@ export class PopupComponent implements OnInit {
   }
 
   sendMessage() {
+    this.messagingStart = true;
     this.timeStamp = this.datePipe.transform(new Date(), 'shortTime');
     this.isReadOnly = true;
     //this.dataService.updateInternalVariable("nothing");
@@ -89,6 +93,8 @@ scrollToBottom(): void {
     //console.error(err);
   }
 }
+
+
 
 toggleColor(value,valu2){
   if(value == "red")

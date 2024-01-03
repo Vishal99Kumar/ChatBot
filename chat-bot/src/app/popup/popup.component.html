@@ -1,8 +1,8 @@
 <div id="close">
-    <i [attr.tabindex]="0" class="material-icons close-icon" (keydown.enter)="dialogeClose()" (click)="dialogeClose()">
-      cancel
-    </i>
-  </div>
+  <i [attr.tabindex]="0" class="material-icons close-icon" (keydown.enter)="dialogeClose()" (click)="dialogeClose()">
+    cancel
+  </i>
+</div>
 <div class="outerclass">
   <div class="header"><app-header></app-header></div>
   <!-- <ng-container *ngIf="isInnerTileShown"><div class="main-content">
@@ -11,49 +11,49 @@
   <div class="main-content">
     <div *ngIf="display" class="details">
       <app-dashboard style="width: 100%;"> </app-dashboard>
-  </div>
+    </div>
     <div *ngIf="!display" class="chat-window-display">
-              <div #chatContainer class="chat-session">
-          <ul class="message-list">
-            <ng-container *ngIf="isInnerTileShown"><app-tile-data style="width: 100%;"></app-tile-data></ng-container>
-            <ng-container *ngIf = "typingGif == true">
-              <div class="typer user-message displayMessage left-message">
-                <div class="divtyperHandling">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
+      <div #chatContainer class="chat-session" [ngClass]="{'firstcall': messagingStart==true}">
+        <ul class="message-list">
+          <ng-container *ngIf="isInnerTileShown"><app-tile-data style="width: 100%;"></app-tile-data></ng-container>
+          <ng-container *ngIf="typingGif == true">
+            <div class="typer user-message displayMessage left-message">
+              <div class="divtyperHandling">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
-            </ng-container>
-              <li class="user-message"
-                  [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
-                  *ngFor="let message of messages; let i = index">
-                  <span class="displayMessage">{{ message.text }}</span>
-                  <div class="oneLiner">
-                  <span class="timestamp">{{ message.timestamp }}</span>
-                  <mat-icon *ngIf="message?.['origin'] != 'me'"class="btn" (click)="toggleColor('green',i)" 
-                    [ngClass] = "{'greenLike': tempColor == ('green'+i)}">thumb_up</mat-icon>
-                  <mat-icon *ngIf="message?.['origin'] != 'me'"class="btn" (click)="toggleColor('red',i)"
-                  [ngClass] = "{'redDislike': tempColor == ('red'+i)}">thumb_down</mat-icon>
-                </div>
-              </li>
-          </ul>
+            </div>
+          </ng-container>
+          <li class="user-message"
+            [ngClass]="{'left-message': message?.['origin'] != 'me', 'right-message': message?.['origin'] == 'me'}"
+            *ngFor="let message of messages; let i = index">
+            <span class="displayMessage">{{ message.text }}</span>
+            <div class="oneLiner">
+              <span class="timestamp">{{ message.timestamp }}</span>
+              <mat-icon *ngIf="message?.['origin'] != 'me'" class="btn" (click)="toggleColor('green',i)"
+                [ngClass]="{'greenLike': tempColor == ('green'+i)}">thumb_up</mat-icon>
+              <mat-icon *ngIf="message?.['origin'] != 'me'" class="btn" (click)="toggleColor('red',i)"
+                [ngClass]="{'redDislike': tempColor == ('red'+i)}">thumb_down</mat-icon>
+            </div>
+          </li>
+        </ul>
       </div>
-      </div>
+    </div>
   </div>
   <div class="footer footerExclusive">
     <form (ngSubmit)="sendMessage()" class="message-input-form">
       <div class="inputbox">
-    <input type="text" id="message" name="message" [readonly]="isReadOnly" autocomplete="off" [(ngModel)]="message" placeholder="Chat with AI Chatbot">
-  </div>
-  <div>
-     <button mat-icon-button class="example-icon">
+        <input type="text" id="message" name="message" [readonly]="isReadOnly" autocomplete="off" [(ngModel)]="message"
+          placeholder="Type here...">
+      </div>
+      <div>
+        <button mat-icon-button class="example-icon">
           <mat-icon class="send-icon">send</mat-icon>
-      </button>
-    </div>
-  </form>
-  
+        </button>
+      </div>
+    </form>
+
     <p class="spaccing">Powered by <a href="https://glorinz.com/"> Glorius Insight</a></p>
   </div>
 </div>
-

@@ -1,17 +1,17 @@
-.parentcontainer{
-    display: flex;
-    flex-direction: column;
+.parentcontainer {
+  display: flex;
+  flex-direction: column;
 }
 
 //div 1 starts here
 .welcome-text {
-    margin-left: 1rem;
-    // margin-right: 16rem;
-    text-align: left;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-  
+  margin-left: 1rem;
+  // margin-right: 16rem;
+  text-align: left;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+
   h2 {
     color: rgb(8, 8, 8);
     font-size: 22px;
@@ -22,107 +22,136 @@
     margin-bottom: 5px;
     text-align: left;
   }
-  
+
   p {
     color: rgb(77, 77, 77);
     font-size: 14px;
     font-weight: 500;
     margin: 0;
     padding: 0;
+    margin-bottom: 0.25rem;
     // padding-left:5px;
   }
 }
 
-  //div 1 ends here 
+//div 1 ends here 
 //////////////////////////////////////////////////
 /// 
 /// 
 
 //div 2 starts here
-.two{
-    display: flex;
-    flex: 1;
+.two {
+  display: flex;
+  flex: 1;
 }
+
 //div 2 ends here
 
 /// 
 /// 
-  //div 3 starts here
-  .askbook-ticket {
-    display: flex;
-    margin-top: 0rem;
-    // margin-top:2rem;
-    align-items: center;
-  
-    p {
-      margin: 0px 0px 0px 4px;
-      color: rgb(8, 8, 8);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-  
-  }
-  
-  .Reimbursement {
-    margin-bottom: 15px;
-  }
-  
-  /////////////////////////////////////////////////////////////////
-  
-  
-  // .example-headers-align .mat-expansion-panel-header-title{
-  //   padding-top: 2vw;
-  // }
-  
-  
-  .example-headers-align .mat-expansion-panel-header-description {
-    flex-basis: 0;
-  }
-  
-  .example-headers-align .mat-expansion-panel-header-description {
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .example-headers-align .mat-form-field+.mat-form-field {
-    margin-left: 8px;
-  }
-  
-  .my-panel {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .my-panel button {
-    margin: 15px 25px;
-  }
-  
-  #DropdownButton {
-    background-color: orange;
-    margin-top: 1vh;
-    // height: 4vh;
-    // width: 8vw;
-  }
-  
-  #DropdownHeading {
-    margin-top: 17px;
-  }
-  
-  // .ExpansionHeader {
-  //   height: 3vw;
-  //   background-color: rgb(235, 238, 253);
-  // }
-  
-  .VerifyContent {
-    margin-top: 10px;
-  }
-  //div 3 ends here
+//div 3 starts here
+.askbook-ticket {
+  display: flex;
+  margin-top: 0rem;
+  // margin-top:2rem;
+  align-items: center;
 
-  .parkContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  p {
+    margin: 0px 0px 0px 4px;
+    color: rgb(8, 8, 8);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
   }
+
+}
+
+.Reimbursement {
+  margin-bottom: 15px;
+}
+
+/////////////////////////////////////////////////////////////////
+
+
+// .example-headers-align .mat-expansion-panel-header-title{
+//   padding-top: 2vw;
+// }
+
+
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
+
+.my-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-panel button {
+  margin: 15px 25px;
+}
+
+#DropdownButton {
+  background-color: orange;
+  margin-top: 1vh;
+  // height: 4vh;
+  // width: 8vw;
+}
+
+#DropdownHeading {
+  margin-top: 17px;
+  font-weight: 550;
+}
+
+// .ExpansionHeader {
+//   height: 3vw;
+//   background-color: rgb(235, 238, 253);
+// }
+
+.VerifyContent {
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  color: rgb(77, 77, 77);
+  font-size: 14px;
+  font-weight: 500
+}
+
+//div 3 ends here
+
+.parkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  // margin: 10px 30px 10px 30px;
+  // background-color: #f7f7f7;
+  // background-color: red;
+  // border-radius: 10px;
+  // box-sizing: border-box;
+  // background-color: red;
+
+  padding: 20px 10px 20px 10px;
+  background-color: red;
+  border-radius: 1px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+// .form-box {
+//   padding: 20px;
+//   background-color: #f7f7f7;
+//   border-radius: 1px;
+//   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+// }

@@ -1,29 +1,125 @@
-.outerStatus{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+.outerStatus {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // text-align: center;
+    // justify-content: center;
+
+    //shivani
+    background: #f7f7f7;
+    padding: 10px;
+    border: 1px solid #f7f7f7;
+    border-radius: 10px;
+    color: white;
+    text-align: justify;
+    width: 80%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 0px auto 0;
 }
-.internalbuttons{
+
+.internalbuttons {
     justify-content: center;
     display: flex;
     flex-direction: row;
     //padding: 2rem;
+
+    //Shivani
+    padding: 2rem;
 }
-.selected{
-    background-color: #faa71b;
+
+.selected {
+    // background-color: #faa71b;
+
+    //Shivani
+    background-color: #ffac5e;
+    color: white;
+    transition: background-color 0.3s ease;
 }
-.stylling
-{
+
+// Shivani
+.selected:hover {
+    background-color: #ffa733;
+}
+
+
+.stylling {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.errorClass{
-    color: red;
+
+.errorClass {
+    // color: red;
+
+    // Shivani
+    color: #ff5c5c;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
-thead{
-    background-color: #00688030 !important;
-  }
+//Vishal
+// thead {
+//     background-color: #00688030 !important;
+// }
+
+// Shivani Start
+.tableStylling {
+    margin-top: 2rem;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #006880;
+    color: rgb(0, 0, 0);
+}
+
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.mat-icon.matPrefix {
+    transition: transform 0.3s ease;
+}
+
+.mat-form-field:hover .mat-icon.matPrefix {
+    transform: scale(1.2);
+}
+
+
+.mat-form-field {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: #006d98 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+//   Shivani End

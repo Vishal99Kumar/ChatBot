@@ -1,251 +1,317 @@
 <div class="tileContainer">
-<ng-container [ngSwitch]="tileClicked">
-    <ng-container *ngSwitchCase="'Status'">
-        <app-flight-status style="width: 100%;"></app-flight-status>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Lost'">
-        <app-lost-found style="width: 100%;"></app-lost-found>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Waiting'">
-        <app-relax style="width: 100%;"></app-relax>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Cab'">
-        <div class="OuterStyllingCssnew">
-            <h1>Transport Facilities</h1>
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <mat-icon>subway</mat-icon>&nbsp;
-                        Metro / Airport Express
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>Linking the Delhi Airport and New Delhi is the high-speed Delhi Metro Rail. This technological and
-                    architectural marvel helps in ease of connectivity between the airport and the rest of Delhi.</p>
+    <ng-container [ngSwitch]="tileClicked">
+        <ng-container *ngSwitchCase="'Status'">
+            <app-flight-status style="width: 100%;"></app-flight-status>
+        </ng-container>
 
-                <p>Out of the ten lines interconnecting the Delhi Metro, the Airport Express Line or the "Orange" Line,
-                    is a metro line that connects Dwarka Sector 21 to the New Delhi Railway Station, while linking the
-                    airport.</p>
+        <ng-container *ngSwitchCase="'Lost'">
+            <app-lost-found style="width: 100%;"></app-lost-found>
+        </ng-container>
 
-                <p>As can be guessed by it's name, the Airport Express Line came into existence to interlink the Indira
-                    Gandhi International Airport to prominent points within New Delhi within an estimated travel time of
-                    23 minutes.</p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <mat-icon>departure_board</mat-icon>&nbsp;
-                        Bus
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>A cost-effective way to travel around the city is to use the shuttle bus facility. In order to lower
-                    pollution levels in the city, Delhi buses run on CNG, making it one of the largest CNG-powered bus
-                    facilities in the world.</p>
+        <ng-container *ngSwitchCase="'Waiting'">
+            <app-relax style="width: 100%;"></app-relax>
+        </ng-container>
 
-                <p>The corporation runs shuttle services every 30 minutes, connecting the airport to the central parts
-                    of Delhi, including Connaught Place & Interstate Bus Terminal.</p>
-                <p>
-                    For more details visit : <a href="//dtc.nic.in/" target="_blank">Click Here</a>
+        <ng-container *ngSwitchCase="'Cab'">
+            <div class="OuterStyllingCssnew">
+                <h1 style="font-size: 18px; text-align: center; font-weight: bold;">Transport Facilities</h1>
+                <p class="extrapadd" style="font-size: 12px; 
+            text-align: center;">Our cab facilities go the extra
+                    mile by offering medical services for passengers in
+                    need. Trained staff and equipped vehicles ensure a safe
+                    and comfortable journey.</p>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-icon>subway</mat-icon>&nbsp;
+                                Metro / Airport Express
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Linking the Delhi Airport and New Delhi is the high-speed Delhi Metro Rail. This
+                            technological and
+                            architectural marvel helps in ease of connectivity between the airport and the rest of
+                            Delhi.</p>
+
+                        <p>Out of the ten lines interconnecting the Delhi Metro, the Airport Express Line or the
+                            "Orange" Line,
+                            is a metro line that connects Dwarka Sector 21 to the New Delhi Railway Station, while
+                            linking the
+                            airport.</p>
+
+                        <p>As can be guessed by it's name, the Airport Express Line came into existence to interlink the
+                            Indira
+                            Gandhi International Airport to prominent points within New Delhi within an estimated travel
+                            time of
+                            23 minutes.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-icon>departure_board</mat-icon>&nbsp;
+                                Bus
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>A cost-effective way to travel around the city is to use the shuttle bus facility. In order
+                            to lower
+                            pollution levels in the city, Delhi buses run on CNG, making it one of the largest
+                            CNG-powered bus
+                            facilities in the world.</p>
+
+                        <p>The corporation runs shuttle services every 30 minutes, connecting the airport to the central
+                            parts
+                            of Delhi, including Connaught Place & Interstate Bus Terminal.</p>
+                        <p>
+                            For more details visit : <a href="//dtc.nic.in/" target="_blank">Click Here</a>
+                        </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-icon>local_taxi</mat-icon>&nbsp;
+                                Taxi / Cabs
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Step outside the baggage belt area of terminal and get instant access to various range of
+                            Taxi
+                            Services.</p>
+
+                        <p>To facilitate the immediate transportation needs of the passengers, Delhi Airport provides
+                            following
+                            Taxi options:</p>
+                        <ul>
+                            <li>Uber - App Based Taxi</li>
+                            <li>Ola - App Based Taxi</li>
+                            <li>Meru Cabs - Radio Taxi</li>
+                            <li>Mega Cabs - Radio Taxi</li>
+                            <li>WTi Car Rental</li>
+                            <li>Carzonrent Car Rental</li>
+                            <li>Blu Smart EV Taxi</li>
+                            <li>Evera EV Taxi</li>
+                        </ul>
+
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-icon>train</mat-icon>&nbsp;
+                                Trains
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Delhi, the National Capital of India, is well connected by railway lines.</p>
+
+                        <p>A Guiness Record holder for having the world's largest Route Relay Interlocking system,
+                            trains are a
+                            convenient way of moving through the city. Delhi Airport is connected to the city by railway
+                            directly too.</p>
+                        <p>
+                            Railway bookings can be made directly through <a href="https://www.irctc.co.in/nget/"
+                                target="_blank">Click Here</a> or visiting the Booking Centers.
+                        </p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Immigration'">
+            <div class="OuterStyllingCssnew">
+                <h1 style="font-size: 18px; text-align: center;font-weight: 
+                bold;">Immigration & Custom</h1>
+                <p class="extrapadd" style="font-size: 12px; text-align: 
+                center;"> Our dedicated team of immigration officers ensures
+                    a smooth and efficient experience for both arriving and
+                    departing passengers.</p>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Immigration
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li><strong>Your Documents:</strong> Upon your arrival at the airport, prepare all the
+                                documents,
+                                including your passport, visa, and arrival card before proceeding to the immigration
+                                hall.</li>
+                            <li><strong>Follow the Signage:</strong>Thereafter, please follow the signage near the
+                                transfer area
+                                to reach the immigration hall.</li>
+                            <li><strong>Special Assistance:</strong>If you or someone you are travelling with needs
+                                special
+                                assistance at the airport, please visit this <a
+                                    href="https://www.newdelhiairport.in/airport-guides/special-assistance-prm"
+                                    target="_blank">page</a>.</li>
+                            <li><strong>Immigration & e-Visa:</strong> Delhi Airport has 48 immigration counters & 46
+                                e-Visa/Visa counters at the Arrival Section and 60 immigration counters & 4 e-Visa/Visa
+                                counters
+                                at the Domestic to International Transfer.</li>
+                            <li><strong>Immigration Info:</strong>For more details on immigration requirements, please
+                                visit -
+                                <a href="https://boi.gov.in/" target="_blank">Click Here</a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Baggage Belt
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li><strong>Proceed to Baggage Reclaim:</strong>After clearing immigration, please proceed
+                                to the
+                                Baggage Reclaim area to collect your flight baggage.</li>
+                            <li><strong>Information Screen:</strong>Check the information screens for the flight’s
+                                carousel
+                                number and collect your checked baggage after ensuring it belongs to you.</li>
+                            <li><strong>Porter Service:</strong> Get assistance from the <a
+                                    href="https://www.newdelhiairport.in/airport-guides/porter-service"
+                                    target="_blank">porter
+                                    service</a> to make your airport journey light and hassle-free.</li>
+                            <li><strong>DGR List:</strong>All departure passengers, please refer to the DGR (Dangerous
+                                Good
+                                Regulations) articles list displayed at all the Check-in counters/SHA Entry Points at
+                                Terminal
+                                3.</li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Customs
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li><strong>Proceed to Customs: </strong>After collecting your bags, proceed to Customs to
+                                get your
+                                goods cleared under the Green or Red Channel.</li>
+                            <li><strong>Green & Red Channel: </strong>The baggage clearance at the major International
+                                Airports
+                                in India consists of two channels for clearance—Green and Red. Proceed to the Green
+                                Channel if
+                                you do not have any dutiable goods to declare and the Red Channel if you have dutiable
+                                goods to
+                                declare.</li>
+                            <li><strong>Wrong Declaration of Goods: </strong>Non-declaration or wrongful declaration of
+                                the
+                                dutiable goods may result in confiscation of goods, fine or penalty. Serious offences
+                                like
+                                attempting to smuggle Gold, without declaration may lead to arrest & prosecution.</li>
+                            <li><strong>Wrong Declaration of Goods: </strong>The Indian Revenue Department has specified
+                                a list
+                                of items, including the size that can now be imported duty-free as part of the baggage.
+                                For this
+                                information and more on customs, visit this <a
+                                    href="https://www.newdelhiairport.in/media/1465/guide_for_travellers_v5-customs-document.pdf"
+                                    target="_blank">link</a>.</li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Leaving The Airport
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li><strong>Shop and Dine:</strong>After you have completed the customs process, you can
+                                visit the
+                                <a href="https://www.newdelhiairport.in/shop-and-dine" target="_blank">shopping and
+                                    dining
+                                    outlets</a> to grab something before leaving the airport.
+                            </li>
+                            <li><strong>Exit Gate Signs:</strong>To leave the airport with your luggage follow the signs
+                                to the
+                                exit gate.</li>
+                            <li><strong>Commute from Airport:</strong>For commuting, passengers have many options,
+                                including
+                                cabs, taxis, car rentals, and metro. For more information, visit <a
+                                    href="https://www.newdelhiairport.in/to-and-from-airport-details"
+                                    target="_blank">here</a>.
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Cargo'">
+            <div class="OuterStyllingCss cargo-section">
+                <h1>Welcome to India’s Largest Cargo Handling Airport</h1>
+                <p>Located in the capital city of India, Indira Gandhi International Airport (IGIA) in Delhi is the
+                    preferred
+                    Air Cargo Hub of India due to its strategic location, hosting elaborate infrastructure and efficient
+                    air
+                    cargo handling services.</p>
+                <p>The cargo facility at Delhi Airport is spread across an area of 150 acres comprising state-of-the-art
+                    infrastructure, 2 integrated cargo terminals, an on-airport logistics centre, and the largest
+                    airline
+                    network connecting 63 International and 80 Domestic destinations served by 62+ air carriers and 20+
+                    freighter airlines.</p>
+                <p>For more details visit <a href="https://www.newdelhiairport.in/cargo#overview" target="_blank">Click
+                        Here</a>
                 </p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <mat-icon>local_taxi</mat-icon>&nbsp;
-                        Taxi / Cabs
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>Step outside the baggage belt area of terminal and get instant access to various range of Taxi
-                    Services.</p>
+            </div>
+        </ng-container>
 
-                <p>To facilitate the immediate transportation needs of the passengers, Delhi Airport provides following
-                    Taxi options:</p>
-                <ul>
-                    <li>Uber - App Based Taxi</li>
-                    <li>Ola - App Based Taxi</li>
-                    <li>Meru Cabs - Radio Taxi</li>
-                    <li>Mega Cabs - Radio Taxi</li>
-                    <li>WTi Car Rental</li>
-                    <li>Carzonrent Car Rental</li>
-                    <li>Blu Smart EV Taxi</li>
-                    <li>Evera EV Taxi</li>
-                </ul>
+        <ng-container *ngSwitchCase="'Parking'">
+            <app-parking style="width: 90%;"></app-parking>
+        </ng-container>
 
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <mat-icon>train</mat-icon>&nbsp;
-                        Trains
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>Delhi, the National Capital of India, is well connected by railway lines.</p>
+        <ng-container *ngSwitchCase="'Cafes'">
+            <app-cafes style="width: 100%;"></app-cafes>
+        </ng-container>
 
-                <p>A Guiness Record holder for having the world's largest Route Relay Interlocking system, trains are a
-                    convenient way of moving through the city. Delhi Airport is connected to the city by railway
-                    directly too.</p>
-                <p>
-                    Railway bookings can be made directly through <a href="https://www.irctc.co.in/nget/"
-                        target="_blank">Click Here</a> or visiting the Booking Centers.
-                </p>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
+        <ng-container *ngSwitchCase="'Medical'">
+            <div class="OuterStyllingCssnew">
+                <h1 style="font-size: 18px; text-align: center;font-weight: bold;">Medical Facilities</h1>
+                <p class="extrapadd" style="font-size: 12px; text-align: center;">The medical center is open for
+                    passengers and the public. Our Medical center serves
+                    as a travel clinic -
+                    24/7.</p>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Terminal 1
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-icon>location_on</mat-icon>&nbsp;
+                        <span>Domestic Arrivals</span>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Terminal 2
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li><mat-icon>location_on</mat-icon>&nbsp;
+                                <span> 1 Medanta Centre in Check-in area.</span>
+                            </li>
+                            <li><mat-icon>location_on</mat-icon>&nbsp;
+                                <span>1 Fully equipped Medanta Health Center in Arrival Forecourt with excellent
+                                    facilities and medical
+                                    equipment and to shift patients to city hospitals if required.</span>
+                            </li>
+                        </ul>
+
+
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Terminal 3
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-icon>location_on</mat-icon>&nbsp;
+                        <span>4 Medanta Centers located at Domestic Pier/ International Pier, Transfer Area & Food
+                            Court</span>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Weather'">
+            <app-weather></app-weather>
+        </ng-container>
     </ng-container>
-    <ng-container *ngSwitchCase="'Immigration'">
-        <div class="OuterStyllingCssnew">
-            <h1>Immigration & Custom</h1>
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Immigration
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul>
-                    <li><strong>Your Documents:</strong> Upon your arrival at the airport, prepare all the documents,
-                        including your passport, visa, and arrival card before proceeding to the immigration hall.</li>
-                    <li><strong>Follow the Signage:</strong>Thereafter, please follow the signage near the transfer area
-                        to reach the immigration hall.</li>
-                    <li><strong>Special Assistance:</strong>If you or someone you are travelling with needs special
-                        assistance at the airport, please visit this <a
-                            href="https://www.newdelhiairport.in/airport-guides/special-assistance-prm"
-                            target="_blank">page</a>.</li>
-                    <li><strong>Immigration & e-Visa:</strong> Delhi Airport has 48 immigration counters & 46
-                        e-Visa/Visa counters at the Arrival Section and 60 immigration counters & 4 e-Visa/Visa counters
-                        at the Domestic to International Transfer.</li>
-                    <li><strong>Immigration Info:</strong>For more details on immigration requirements, please visit -
-                        <a href="https://boi.gov.in/" target="_blank">Click Here</a></li>
-                </ul>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Baggage Belt
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul>
-                    <li><strong>Proceed to Baggage Reclaim:</strong>After clearing immigration, please proceed to the
-                        Baggage Reclaim area to collect your flight baggage.</li>
-                    <li><strong>Information Screen:</strong>Check the information screens for the flight’s carousel
-                        number and collect your checked baggage after ensuring it belongs to you.</li>
-                    <li><strong>Porter Service:</strong> Get assistance from the <a
-                            href="https://www.newdelhiairport.in/airport-guides/porter-service" target="_blank">porter
-                            service</a> to make your airport journey light and hassle-free.</li>
-                    <li><strong>DGR List:</strong>All departure passengers, please refer to the DGR (Dangerous Good
-                        Regulations) articles list displayed at all the Check-in counters/SHA Entry Points at Terminal
-                        3.</li>
-                </ul>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Customs
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul>
-                    <li><strong>Proceed to Customs: </strong>After collecting your bags, proceed to Customs to get your
-                        goods cleared under the Green or Red Channel.</li>
-                    <li><strong>Green & Red Channel: </strong>The baggage clearance at the major International Airports
-                        in India consists of two channels for clearance—Green and Red. Proceed to the Green Channel if
-                        you do not have any dutiable goods to declare and the Red Channel if you have dutiable goods to
-                        declare.</li>
-                    <li><strong>Wrong Declaration of Goods: </strong>Non-declaration or wrongful declaration of the
-                        dutiable goods may result in confiscation of goods, fine or penalty. Serious offences like
-                        attempting to smuggle Gold, without declaration may lead to arrest & prosecution.</li>
-                    <li><strong>Wrong Declaration of Goods: </strong>The Indian Revenue Department has specified a list
-                        of items, including the size that can now be imported duty-free as part of the baggage. For this
-                        information and more on customs, visit this <a
-                            href="https://www.newdelhiairport.in/media/1465/guide_for_travellers_v5-customs-document.pdf"
-                            target="_blank">link</a>.</li>
-                </ul>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Leaving The Airport
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul>
-                    <li><strong>Shop and Dine:</strong>After you have completed the customs process, you can visit the
-                        <a href="https://www.newdelhiairport.in/shop-and-dine" target="_blank">shopping and dining
-                            outlets</a> to grab something before leaving the airport.</li>
-                    <li><strong>Exit Gate Signs:</strong>To leave the airport with your luggage follow the signs to the
-                        exit gate.</li>
-                    <li><strong>Commute from Airport:</strong>For commuting, passengers have many options, including
-                        cabs, taxis, car rentals, and metro. For more information, visit <a
-                            href="https://www.newdelhiairport.in/to-and-from-airport-details" target="_blank">here</a>.
-                    </li>
-                </ul>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Cargo'">
-        <div class="OuterStyllingCss">
-        <h1>Welcome to India’s Largest Cargo Handling Airport</h1>
-        <p>Located in the capital city of India, Indira Gandhi International Airport (IGIA) in Delhi is the preferred
-            Air Cargo Hub of India due to its strategic location, hosting elaborate infrastructure and efficient air
-            cargo handling services.</p>
-        <p>The cargo facility at Delhi Airport is spread across an area of 150 acres comprising state-of-the-art
-            infrastructure, 2 integrated cargo terminals, an on-airport logistics centre, and the largest airline
-            network connecting 63 International and 80 Domestic destinations served by 62+ air carriers and 20+
-            freighter airlines.</p>
-        <p>For more details visit <a href="https://www.newdelhiairport.in/cargo#overview" target="_blank">Click Here</a>
-        </p>
-    </div>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Parking'">
-        <app-parking  style="width: 90%;"></app-parking>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Cafes'">
-        <app-cafes style="width: 100%;"></app-cafes>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Medical'">
-        <div class="OuterStyllingCssnew">
-        <h1>Medical Facilities</h1>
-        <p class="extrapadd">The medical center is open for passengers and the public. Our Medical center serves as a travel clinic -
-            24/7.</p>
-            <mat-accordion>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Terminal 1
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <mat-icon>location_on</mat-icon>&nbsp;
-                    <span>Domestic Arrivals</span>
-                </mat-expansion-panel>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Terminal 2
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <ul>
-                        <li><mat-icon>location_on</mat-icon>&nbsp;
-                            <span> 1 Medanta Centre in Check-in area.</span></li>
-                        <li><mat-icon>location_on</mat-icon>&nbsp;
-                            <span>1 Fully equipped Medanta Health Center in Arrival Forecourt with excellent facilities and medical
-                                equipment and to shift patients to city hospitals if required.</span></li>
-                    </ul>
-                    
-                    
-                </mat-expansion-panel>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Terminal 3
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <mat-icon>location_on</mat-icon>&nbsp;
-                    <span>4 Medanta Centers located at Domestic Pier/ International Pier, Transfer Area & Food Court</span>
-                </mat-expansion-panel>
-            </mat-accordion>
-        </div>
-    </ng-container>
-    <ng-container *ngSwitchCase="'Weather'">
-        <app-weather></app-weather>
-    </ng-container>
-</ng-container>
 </div>

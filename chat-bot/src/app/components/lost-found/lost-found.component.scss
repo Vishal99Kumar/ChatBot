@@ -1,22 +1,114 @@
-.lostOuterContainer
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-.errorClass{
-    color: red;
-}
-.stylling
-{
-    padding-top: 2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.lostOuterContainer {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // text-align: center;
+    // justify-content: center;
+
+    // Shivani
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    // margin: 80px auto 0;
+    font-size: 16px;
+    margin: 0 auto 0;
 }
 
-thead{
-    background-color: #00688030 !important;
-  }
+// Vishal
+// .errorClass{
+//     color: red;
+// }
+
+// Shivani
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.stylling {
+    // Vishal
+    // padding-top: 2rem;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+
+    // Shivani
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+// Vishal
+// thead {
+//     background-color: #00688030 !important;
+// }
+
+
+// Shivani Start
+mat-form-field {
+    width: 48%;
+    margin-bottom: 1rem;
+}
+
+mat-form-field:last-child {
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    height: 45px;
+    width: 150px;
+    // width: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.tableStylling {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+/* Style for error message */
+.errorClass {
+    color: red;
+    margin-top: 1rem;
+}
+
+/* Style for table headers */
+.mat-header-cell {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Style for alternating rows */
+.mat-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for cell content */
+.mat-cell {
+    text-align: center;
+}
+
+
+.center-button {
+    margin-left: 70px;
+    /* Adjust the margin as needed */
+}
+
+// Shivani End

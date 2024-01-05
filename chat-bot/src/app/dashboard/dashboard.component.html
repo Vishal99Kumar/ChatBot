@@ -18,37 +18,37 @@
           <!-- </div> -->
         </mat-expansion-panel-header>
 
-        <div class="VerifyContent"><span>Enter details for flight booking</span>
-        </div>
+
 
         <!-- <div class="form-box"> -->
-          <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="parkContainer">
-            <mat-form-field>
-              <input matInput type="text" placeholder="From" formControlName="fromItem">
-              <mat-icon matPrefix>search</mat-icon>
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput type="text" placeholder="To" formControlName="toItem">
-              <mat-icon matPrefix>search</mat-icon>
-            </mat-form-field>
-            <mat-form-field>
+        <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="parkContainer">
+          <div class="VerifyContent"><span>Book Your Flight</span>
+          </div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="From" formControlName="fromItem">
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="To" formControlName="toItem">
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>MM/DD/YYYY</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fromDate" (click)="picker.open()">
+            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <!-- <mat-form-field>
               <mat-label>MM/DD/YYYY</mat-label>
-              <input matInput [matDatepicker]="picker" formControlName="fromDate" (click)="picker.open()">
-              <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field>
-              <mat-label>MM/DD/YYYY</mat-label>
-              <input matInput [matDatepicker]="picker2" formControlName="toDate" (click)="picker2.open()">
-              <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-              <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+              <input matInput [matDatepicker]="picker2" formControlName="toDate" (click)="picker2.open()"> -->
+          <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+          <!-- <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
               <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-            <button mat-raised-button color="primary" id="DropdownButton" type="submit"
-              [disabled]="isFormDisabled()">Book
-              Here</button>
-          </form>
+            </mat-form-field> -->
+          <button mat-raised-button color="primary" id="DropdownButton" type="submit" [disabled]="isFormDisabled()">Book
+            Here</button>
+        </form>
         <!-- </div> -->
 
       </mat-expansion-panel>

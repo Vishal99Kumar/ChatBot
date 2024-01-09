@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-y: auto;
-  padding: 60px;
+  // overflow-y: auto;
+  // padding: 60px;
 }
 
 .example-card {
@@ -15,7 +15,7 @@
   // width: 100%;
 
   // Shivani
-  width: 60%;
+  width: 80%;
   /* Adjusted width to fill the container */
   max-width: 400px;
   height: auto;
@@ -35,9 +35,10 @@
 
   // Shivani
   transition: transform 0.3s ease-in-out;
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 

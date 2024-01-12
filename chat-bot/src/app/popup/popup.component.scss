@@ -125,15 +125,14 @@ input {
   color: black;
   text-align: right;
   background-color: rgb(212, 214, 228);
-  border-radius: 5px;
   padding: 8px;
-  margin: 15px 15px 25px 15px;
-  border-radius: 8px 8px 0px;
+  margin: 15px 5px 25px 15px;
+  border-radius: 8px 8px 0px 8px;
   top: 70px;
   right: 490px;
   //max-width:fit-content;
   margin-left: auto;
-  font-size: 12px;
+  font-size: 13px;
   max-width: 70%;
 }
 
@@ -148,16 +147,13 @@ ul {
   color: black;
   text-align: left;
   padding: 8px;
-  margin: 7px;
+  margin: 7px auto 7px 5px;
   //background-color:rgba(218, 231, 245, 0.61) ; Original Color
   background-color: #ececec;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px 8px 8px 0px;
   //max-width: fit-content;
-  font-size: 12px;
+  font-size: 13px;
   max-width: 70%;
-  margin-right: auto;
 }
 
 .left-message::before {
@@ -165,7 +161,7 @@ ul {
   display: inline-block;
   width: 26px;
   height: 26px;
-  background: url(https://i.ibb.co/ft3RhV6/avatarrobot.png) no-repeat center center;
+  background: url(/assets/ReplyIcon.png) no-repeat center center;
   //margin-right: 8px; /* Adjust spacing between the avatar and the message */
   vertical-align: middle;
   /* Align the avatar vertically with the text */
@@ -205,7 +201,7 @@ ul {
 ///////////////////////////typing gif starts
 .typer {
   flex-direction: row;
-  margin-bottom: -0.8rem;
+  margin-bottom: 0rem;
   //margin: 32px;
   position: absolute;
 
@@ -330,4 +326,6 @@ ul {
 
 .btn {
   color: rgb(143, 133, 133);
+  font-size: 15px;
+  height: 18px;
 }

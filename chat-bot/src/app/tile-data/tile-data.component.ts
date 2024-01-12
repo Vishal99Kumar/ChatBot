@@ -13,7 +13,7 @@ export class TileDataComponent implements OnInit {
   selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   tileClicked:string;
   form:FormGroup;
-
+  
 
   constructor(private dataService: DataShareService,
     private fb: FormBuilder){}

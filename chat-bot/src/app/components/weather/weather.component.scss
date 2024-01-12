@@ -74,16 +74,23 @@
     font-size: 2rem;
     font-weight: bold;
     color: #2ecc71;
+    // new change
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .weather__minmax {
     display: flex;
     justify-content: center;
+    // new change 
+    margin-bottom: 0.5rem;
 }
 
 .weather__minmax p {
     font-size: 16px;
     margin: 0.5rem;
+    // new change 
+
 }
 
 .weather__info {
@@ -97,12 +104,15 @@
     display: flex;
     align-items: center;
     text-align: center;
-    background: #e74c3c;
+    background: #b3c3e7;
     // background: #1dbf6e;
-    padding: 1.2rem;
+    // padding: 1.2rem;
+    // new change
+    padding: 0.1rem;
     border-radius: 10px;
-    transition: transform 0.5s ease-in-out;
-
+    // transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background 0.5s ease-in-out;
+    
 }
 
 .weather__card:hover {
@@ -115,7 +125,8 @@
 }
 
 .weather__card p {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 13px;
     margin: 0.5rem;
 }
 
@@ -140,4 +151,32 @@
     }
 }
 
+
+// new changes 
+.weatherContainer{
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.weather__city{
+    font-size:28px;
+}
+.weather__datetime{
+    align-items: center;
+
+}
+
+.weather__icon{
+    text-align: center;
+}
+
+.weather__forecast{
+    text-align: center;
+}
+
+// new changes 
+// .weather__icon,
+// .weather__forecast {
+//     display: inline-block; 
+// }
 //   Shivani End

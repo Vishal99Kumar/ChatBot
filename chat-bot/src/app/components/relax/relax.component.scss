@@ -135,3 +135,7 @@
 
 
 // Shivani End
+
+::ng-deep .mat-mdc-card-content:last-child {
+  padding-bottom: 0px !important;
+}

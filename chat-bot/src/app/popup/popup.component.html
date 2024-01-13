@@ -44,11 +44,11 @@
   <div class="footer footerExclusive">
     <form (ngSubmit)="sendMessage()" class="message-input-form">
       <div class="inputbox">
-        <input type="text" id="message" name="message" [readonly]="isReadOnly" autocomplete="off" [(ngModel)]="message"
-          placeholder="Type here...">
+        <input type="text" id="message" name="message" [readonly]="isReadOnly" autocomplete="off"
+          (input)="onInputChange($event)" [(ngModel)]="message" placeholder="Type here...">
       </div>
       <div>
-        <button mat-icon-button class="example-icon">
+        <button mat-icon-button class="example-icon" [disabled]="sendButton">
           <mat-icon class="send-icon">send</mat-icon>
         </button>
       </div>

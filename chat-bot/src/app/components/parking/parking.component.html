@@ -1,156 +1,177 @@
 <div class="parkContainer">
     <!-- <h3>Summary - Park & Fly</h3> -->
     <h2>Pre Book Your Parking With Us</h2>
-    <form [formGroup]="parkingForm" (ngSubmit)="onSubmit()" class="parkContainer">
-    <ng-container [ngSwitch]="Steps">
-        <ng-container *ngSwitchCase="'First'">
-            <span data-row="domestic">Select Terminal</span>
-            <button mat-raised-button class="buttonChange terminal-bg" [ngClass]="{'selected': parkingForm.get('Terminal').value === 'Terminal 3'}">Terminal 3</button>
-            <span>Travellers Type</span>
-            <div class="internalbuttons">
-                <div class="buttonStyling">
-            <button mat-raised-button class="buttonChange" [class.selected]="parkingForm.get('type').value === 'Domestic'"
-             (click)="toggleTyped()">Domestic</button></div>
-             <div class="buttonStyling">
-            <button mat-raised-button class="buttonChange" [class.selected]="parkingForm.get('type').value === 'International'"
-             (click)="toggleTypei()">International</button></div>
-            </div>
-            <button mat-raised-button color="primary" (click)="nextStep('Second')">Continue</button>
-        </ng-container>
-        <ng-container *ngSwitchCase="'Second'">
-            <mat-form-field>
-                <mat-label>MM/DD/YYYY</mat-label>
-                <input matInput [matDatepicker]="picker" [min]="minDate" formControlName="checkinDate" (click)="picker.open()">
-                <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <div class="internalbuttons">
-                <div class="buttonStyling">
-            <button mat-raised-button color="primary" (click)="nextStep('First')">Back</button></div>
-            <div class="buttonStyling">
-            <button mat-raised-button color="primary" (click)="nextStep('Third')" [disabled]="parkingForm.get('checkinDate').value == null">Continue</button></div>
-        </div>
-        </ng-container>
-        <ng-container *ngSwitchCase="'Third'">
-            <div class="ambuttons">
-            <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 1"
-             (click)="toggleCheck(1)">01:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 2"
-             (click)="toggleCheck(2)">02:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 3"
-             (click)="toggleCheck(3)">03:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 4"
-             (click)="toggleCheck(4)">04:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 5"
-             (click)="toggleCheck(5)">05:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 6"
-             (click)="toggleCheck(6)">06:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 7"
-             (click)="toggleCheck(7)">07:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 8"
-             (click)="toggleCheck(8)">08:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 9"
-             (click)="toggleCheck(9)">09:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 10"
-             (click)="toggleCheck(10)">10:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 11"
-             (click)="toggleCheck(11)">11:00</button>
-             <button mat-raised-button  [class.selected]="parkingForm.get('checkInTime').value === 12"
-             (click)="toggleCheck(12)">12:00</button>
-            </div>
-             <mat-radio-group aria-label="Select an option" formControlName="Inampm">
-                <mat-radio-button value="AM" (click)="toggleInAMPM('AM')">AM</mat-radio-button>
-                <mat-radio-button value="PM" (click)="toggleInAMPM('PM')">PM</mat-radio-button>
-              </mat-radio-group>
-            <div class="internalbuttons">
-                <div class="buttonStyling">
-                <button mat-raised-button color="primary" (click)="nextStep('Second')">Back</button></div>
-                <div class="buttonStyling">
-                <button mat-raised-button color="primary" (click)="nextStep('Fourth')" [disabled]="parkingForm.get('checkInTime').value == null">Continue</button></div>
-            </div>
-        </ng-container>
-        <ng-container *ngSwitchCase="'Fourth'">
-            <mat-form-field>
-                <mat-label>MM/DD/YYYY</mat-label>
-                <input matInput [matDatepicker]="picker" [min]="minDate" formControlName="checkOutDate" (click)="picker.open()">
-                <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <div class="internalbuttons">
-                <div class="buttonStyling">
-                <button mat-raised-button color="primary" (click)="nextStep('Third')">Back</button></div>
-                <div class="buttonStyling">
-                <button mat-raised-button color="primary" (click)="nextStep('Fifth')" [disabled]="parkingForm.get('checkOutDate').value == null">Continue</button></div>
-            </div>
-        </ng-container>
-        <ng-container *ngSwitchCase="'Fifth'">
-            <div class="ambuttons">
-                <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 1"
-                 (click)="toggleCheckOut(1)">01:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 2"
-                 (click)="toggleCheckOut(2)">02:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 3"
-                 (click)="toggleCheckOut(3)">03:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 4"
-                 (click)="toggleCheckOut(4)">04:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 5"
-                 (click)="toggleCheckOut(5)">05:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 6"
-                 (click)="toggleCheckOut(6)">06:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 7"
-                 (click)="toggleCheckOut(7)">07:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 8"
-                 (click)="toggleCheckOut(8)">08:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 9"
-                 (click)="toggleCheckOut(9)">09:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 10"
-                 (click)="toggleCheckOut(10)">10:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 11"
-                 (click)="toggleCheckOut(11)">11:00</button>
-                 <button mat-raised-button  [class.selected]="parkingForm.get('checkOutTime').value === 12"
-                 (click)="toggleCheckOut(12)">12:00</button>
+    <form [formGroup]="parkingForm" (ngSubmit)="onSubmit()" class="formContainer">
+        <ng-container [ngSwitch]="Steps">
+            <ng-container *ngSwitchCase="'First'">
+                <span data-row="domestic">Select Terminal</span>
+                <button mat-raised-button class="buttonChange terminal-bg"
+                    [ngClass]="{'selected': parkingForm.get('Terminal').value === 'Terminal 3'}">Terminal 3</button>
+                <span>Travellers Type</span>
+                <div class="internalbuttons">
+                    <div class="buttonStyling">
+                        <button mat-raised-button class="buttonChange"
+                            [class.selected]="parkingForm.get('type').value === 'Domestic'"
+                            (click)="toggleTyped()">Domestic</button>
+                    </div>
+                    <div class="buttonStyling">
+                        <button mat-raised-button class="buttonChange"
+                            [class.selected]="parkingForm.get('type').value === 'International'"
+                            (click)="toggleTypei()">International</button>
+                    </div>
+                </div>
+                <button mat-raised-button color="primary" (click)="nextStep('Second')">Continue</button>
+            </ng-container>
+            <ng-container *ngSwitchCase="'Second'">
+                <mat-form-field>
+                    <mat-label>MM/DD/YYYY</mat-label>
+                    <input matInput [matDatepicker]="picker" [min]="minDate" formControlName="checkinDate"
+                        (click)="picker.open()">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="internalbuttons">
+                    <div class="buttonStyling">
+                        <button mat-raised-button color="primary" (click)="nextStep('First')">Back</button>
+                    </div>
+                    <div class="buttonStyling">
+                        <button mat-raised-button color="primary" (click)="nextStep('Third')"
+                            [disabled]="parkingForm.get('checkinDate').value == null">Continue</button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngSwitchCase="'Third'">
+                <div class="ambuttons">
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 1"
+                        (click)="toggleCheck(1)">01:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 2"
+                        (click)="toggleCheck(2)">02:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 3"
+                        (click)="toggleCheck(3)">03:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 4"
+                        (click)="toggleCheck(4)">04:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 5"
+                        (click)="toggleCheck(5)">05:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 6"
+                        (click)="toggleCheck(6)">06:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 7"
+                        (click)="toggleCheck(7)">07:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 8"
+                        (click)="toggleCheck(8)">08:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 9"
+                        (click)="toggleCheck(9)">09:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 10"
+                        (click)="toggleCheck(10)">10:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 11"
+                        (click)="toggleCheck(11)">11:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkInTime').value === 12"
+                        (click)="toggleCheck(12)">12:00</button>
+                </div>
+                <mat-radio-group aria-label="Select an option" formControlName="Inampm">
+                    <mat-radio-button value="AM" (click)="toggleInAMPM('AM')">AM</mat-radio-button>
+                    <mat-radio-button value="PM" (click)="toggleInAMPM('PM')">PM</mat-radio-button>
+                </mat-radio-group>
+                <div class="internalbuttons">
+                    <div class="buttonStyling">
+                        <button mat-raised-button color="primary" (click)="nextStep('Second')">Back</button>
+                    </div>
+                    <div class="buttonStyling">
+                        <button mat-raised-button color="primary" (click)="nextStep('Fourth')"
+                            [disabled]="parkingForm.get('checkInTime').value == null">Continue</button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngSwitchCase="'Fourth'">
+                <mat-form-field>
+                    <mat-label>MM/DD/YYYY</mat-label>
+                    <input matInput [matDatepicker]="picker" [min]="minDate" formControlName="checkOutDate"
+                        (click)="picker.open()">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="internalbuttons">
+                    <div class="buttonStyling">
+                        <button mat-raised-button color="primary" (click)="nextStep('Third')">Back</button>
+                    </div>
+                    <div class="buttonStyling">
+                        <button mat-raised-button color="primary" (click)="nextStep('Fifth')"
+                            [disabled]="parkingForm.get('checkOutDate').value == null">Continue</button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngSwitchCase="'Fifth'">
+                <div class="ambuttons">
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 1"
+                        (click)="toggleCheckOut(1)">01:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 2"
+                        (click)="toggleCheckOut(2)">02:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 3"
+                        (click)="toggleCheckOut(3)">03:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 4"
+                        (click)="toggleCheckOut(4)">04:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 5"
+                        (click)="toggleCheckOut(5)">05:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 6"
+                        (click)="toggleCheckOut(6)">06:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 7"
+                        (click)="toggleCheckOut(7)">07:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 8"
+                        (click)="toggleCheckOut(8)">08:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 9"
+                        (click)="toggleCheckOut(9)">09:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 10"
+                        (click)="toggleCheckOut(10)">10:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 11"
+                        (click)="toggleCheckOut(11)">11:00</button>
+                    <button mat-raised-button [class.selected]="parkingForm.get('checkOutTime').value === 12"
+                        (click)="toggleCheckOut(12)">12:00</button>
                 </div>
                 <mat-radio-group aria-label="Select an option" formControlName="Outampm">
                     <mat-radio-button value="AM" (click)="toggleOutAMPM('AM')">AM</mat-radio-button>
                     <mat-radio-button value="PM" (click)="toggleOutAMPM('PM')">PM</mat-radio-button>
-                  </mat-radio-group>
-                  <div class="internalbuttons">
+                </mat-radio-group>
+                <div class="internalbuttons">
                     <div class="buttonStyling">
-                    <button mat-raised-button color="primary" (click)="nextStep('Fourth')" [disabled]="isShowTable">Back</button></div>
+                        <button mat-raised-button color="primary" (click)="nextStep('Fourth')"
+                            [disabled]="isShowTable">Back</button>
+                    </div>
                     <div class="buttonStyling extra">
-                    <button mat-raised-button color="primary" type="submit" [disabled]="parkingForm.get('checkOutTime').value == null" (click)="onExtraClick()">Check Availability</button></div>
-                </div>           
+                        <button mat-raised-button color="primary" type="submit"
+                            [disabled]="parkingForm.get('checkOutTime').value == null"
+                            (click)="onExtraClick()">Check</button>
+                    </div>
+                </div>
+            </ng-container>
         </ng-container>
+    </form>
+    <ng-container *ngIf="isShowTable">
+        <div class="formlook">
+            <div data-row="traveller">
+                <span class="left">Traveller</span>
+                <span class="right">{{parkingForm.value.type}}</span>
+            </div>
+            <div>
+                <span>Check In Time</span>
+                <span>{{parkingForm.value.checkinDate | date:"yyyy/MM/dd" }} &nbsp; {{showCheckinHour}}:00</span>
+            </div>
+            <div>
+                <span>Check Out Time</span>
+                <span>{{parkingForm.value.checkOutDate | date:"yyyy/MM/dd" }} &nbsp; {{showCheckOutHour}}:00</span>
+            </div>
+            <div>
+                <span>Duration</span>
+                <span>{{duration}} hours</span>
+            </div>
+            <div>
+                <span>Mode of Payment</span>
+                <span>Online Payment</span>
+            </div>
+            <div>
+                <span>Total Amount</span>
+                <span>INR {{cost}}</span>
+            </div>
+        </div>
     </ng-container>
-</form>
-<ng-container *ngIf="isShowTable">
-<div class="formlook">
-    <div data-row="traveller">
-        <span class="left">Traveller</span>
-        <span class="right">{{parkingForm.value.type}}</span>
-    </div>
-    <div>
-        <span>Check In Time</span>
-        <span>{{parkingForm.value.checkinDate | date:"yyyy/MM/dd" }} &nbsp; {{showCheckinHour}}:00</span>
-    </div>
-    <div>
-        <span>Check Out Time</span>
-        <span>{{parkingForm.value.checkOutDate | date:"yyyy/MM/dd" }} &nbsp; {{showCheckOutHour}}:00</span>
-    </div>
-    <div>
-        <span>Duration</span>
-        <span>{{duration}} hours</span>
-    </div>
-    <div>
-        <span>Mode of Payment</span>
-        <span>Online Payment</span>
-    </div>
-    <div>
-        <span>Total Amount</span>
-        <span>INR {{cost}}</span>
-    </div>
-</div>
-</ng-container>
 </div>

@@ -1,92 +1,95 @@
-.parkContainer{
+.parkContainer {
   // add position
-    position: relative; 
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-    // new changes
-    background: #f7f7f7;
-    border-radius: 10px;
-    // new changes
-    padding: 4px;
-    margin: 0 auto 0;
-
-    // new change 
-}
-.internalbuttons{
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    // padding: 1.5rem;
-    padding: 1rem;
+  // new changes
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 0 auto 0;
 
 }
-.selected{
-    background-color: #faa71b;
+
+.internalbuttons {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  // padding: 1.5rem;
+  padding: 1rem;
+
 }
 
-.ambuttons{
-    flex-direction: row;
+.selected {
+  background-color: #faa71b;
 }
 
-.formlook{
+.ambuttons {
+  flex-direction: row;
+}
+
+.formlook {
   // new change
-  position: absolute; 
-    top: 100%; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    // background-color: #f4f2f2;
-    // z-index: 1;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  // background-color: #f4f2f2;
+  // z-index: 1;
 
 
 
-    // border: solid 1px rgb(73, 69, 69);
-    display:flex;
-    flex-direction:column;
-    padding: 6.5rem;
+  // border: solid 1px rgb(73, 69, 69);
+  display: flex;
+  flex-direction: column;
+  padding: 6.5rem;
 }
 
-.formRow{
-    flex-direction: row;
-    gap: 10px 20px;
+.formRow {
+  flex-direction: row;
+  gap: 10px 20px;
 }
 
-span{
-    padding: 0.5rem 0 0.5rem 0;
-    font-weight: 500;
+span {
+  padding: 0.5rem 0 0.5rem 0;
+  font-weight: 500;
 }
-  
-  .formlook > div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px; /* Adjust as needed */
-  }
-  
-  .formlook .left {
-    text-align: left;
-    padding: 0.5rem;
-  }
-  
-  .formlook .right {
-    text-align: right;
-    padding: 0.5rem;
 
-  }
-  
-  .extra{
-    padding-bottom: 1rem;
-  }
+.formlook>div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  /* Adjust as needed */
+}
+
+.formlook .left {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.formlook .right {
+  text-align: right;
+  padding: 0.5rem;
+
+}
+
+.extra {
+  padding-bottom: 1rem;
+}
 
 // new changes 
 
-h3, h2, button {
+h3,
+h2,
+button {
   margin-bottom: 0.5rem;
 }
 
 .mat-datepicker-input {
-  font-size: 14px; 
+  font-size: 14px;
 }
 
 .ambuttons button {
@@ -95,27 +98,34 @@ h3, h2, button {
 
 .formlook {
   // border-top: 1px solid #0b0b0b; 
-  margin-top: 1rem; 
-  padding-top: 1rem; 
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
-.formlook > div {
+.formlook>div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px; 
-  border-bottom: 1px solid #0b0a0a; 
-  padding-bottom: 5px; 
+  margin-bottom: 5px;
+  border-bottom: 1px solid #0b0a0a;
+  padding-bottom: 5px;
 }
 
-.formlook > div[data-row="traveller"] {
+.formlook>div[data-row="traveller"] {
   // background-color: #3498db; 
-  color: rgb(9, 9, 9); 
-}
-.formlook > div[data-row="domestic"] {
-  // background-color: #27ae60; 
-  color: rgb(12, 12, 12); 
+  color: rgb(9, 9, 9);
 }
 
-h2{
+.formlook>div[data-row="domestic"] {
+  // background-color: #27ae60; 
+  color: rgb(12, 12, 12);
+}
+
+h2 {
   margin-top: 1rem;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }

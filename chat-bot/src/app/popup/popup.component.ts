@@ -27,6 +27,7 @@ export class PopupComponent implements OnInit {
   timeStamp:any;
   tempColor:any;
   messagingStart : boolean = false;
+  sendButton : boolean = true;
   constructor(private datePipe: DatePipe,
     private msg: MessageServiceService,
     private dialogRef: MatDialogRef<PopupComponent>,
@@ -55,6 +56,7 @@ export class PopupComponent implements OnInit {
 
   sendMessage() {
     this.messagingStart = true;
+    this.sendButton = true;
     this.timeStamp = this.datePipe.transform(new Date(), 'shortTime');
     this.isReadOnly = true;
     //this.dataService.updateInternalVariable("nothing");
@@ -107,4 +109,13 @@ toggleColor(value,valu2){
   console.log(this.tempColor);
 }
 
+onInputChange(event: any) {
+  console.log(event.target.value);
+  this.sendButton = event.target.value.length > 0 ? false : true;
+  console.log(this.sendButton);
+  
+} 
+
 }
+
+

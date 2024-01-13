@@ -204,9 +204,11 @@ ul {
   margin-bottom: 0rem;
   //margin: 32px;
   position: absolute;
+  height: 0.85rem;
 
   .divtyperHandling {
     margin-left: -1.5rem;
+    margin-top: -0.25rem;
   }
 
   .dot {
@@ -270,6 +272,7 @@ ul {
   /* Styles */
   #close {
     padding-right: 0rem !important;
+    right: -0.2rem !important;
   }
 }
 
@@ -328,4 +331,5 @@ ul {
   color: rgb(143, 133, 133);
   font-size: 15px;
   height: 18px;
+  width: fit-content;
 }

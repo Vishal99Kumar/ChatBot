@@ -5,7 +5,9 @@
   // Shivani
   justify-content: center;
   align-items: center;
+
   min-height: 100vh;
+
   // overflow-y: auto;
   // padding: 60px;
 }
@@ -122,9 +124,14 @@
 }
 
 .card-text {
-  color: rgb(8, 60, 164);
+  // color: rgb(8, 60, 164);
+  color: #000;
+  // font-weight: bold;
   font-size: 1.5rem;
   margin: 0;
+  // z-index: 3;
 }
+
+
 
 // Shivani End

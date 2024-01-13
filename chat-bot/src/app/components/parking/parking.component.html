@@ -1,11 +1,11 @@
 <div class="parkContainer">
-    <h3>Summary - Park & Fly</h3>
+    <!-- <h3>Summary - Park & Fly</h3> -->
     <h2>Pre Book Your Parking With Us</h2>
     <form [formGroup]="parkingForm" (ngSubmit)="onSubmit()" class="parkContainer">
     <ng-container [ngSwitch]="Steps">
         <ng-container *ngSwitchCase="'First'">
-            <span>Select Terminal</span>
-            <button mat-raised-button class="buttonChange" [ngClass]="{'selected': parkingForm.get('Terminal').value === 'Terminal 3'}">Terminal 3</button>
+            <span data-row="domestic">Select Terminal</span>
+            <button mat-raised-button class="buttonChange terminal-bg" [ngClass]="{'selected': parkingForm.get('Terminal').value === 'Terminal 3'}">Terminal 3</button>
             <span>Travellers Type</span>
             <div class="internalbuttons">
                 <div class="buttonStyling">
@@ -127,7 +127,7 @@
 </form>
 <ng-container *ngIf="isShowTable">
 <div class="formlook">
-    <div>
+    <div data-row="traveller">
         <span class="left">Traveller</span>
         <span class="right">{{parkingForm.value.type}}</span>
     </div>

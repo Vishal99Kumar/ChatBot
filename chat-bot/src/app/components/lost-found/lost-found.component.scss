@@ -54,19 +54,23 @@ mat-form-field:last-child {
 }
 
 button[type="submit"] {
-    background-color: #3498db;
+    // background-color: #3498db;
+    background-color: #673ab7;
     color: white;
     border: none;
-    height: 45px;
-    width: 150px;
+    height: 40px;
+    width: 250px;
     // width: 100%;
-    border-radius: 25px;
+    // border-radius: 25px;
+    border-radius: 8px;
+    padding: 12px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #2980b9;
+    // background-color: #2980b9;
+    background-color: #7737e6;
     transform: scale(1.05);
 }
 

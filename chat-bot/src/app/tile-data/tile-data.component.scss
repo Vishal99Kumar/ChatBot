@@ -111,11 +111,14 @@ mat-expansion-panel {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    // background-color: #fff;
+    // background-color: rgb(235, 238, 253);
 }
 
 mat-expansion-panel-header {
-    color: #fff;
+    // color: #fff;
+    background-color: rgb(235, 238, 253);
+  
 }
 
 mat-panel-title {
@@ -143,15 +146,18 @@ a:hover {
     color: #1e87d5;
 }
 
+
 //   Shivani End
 
 // Shivani Start
 .cargo-section {
-    background: #abebff;
+    // background: #abebff;
+    background-color: #f7f7f7;
     /* Gradient background color */
     padding: 10px;
     /* Reduced padding */
-    border: 1px solid #92cdf4;
+    // border: 1px solid #92cdf4;
+    border: 1px solid #f7f7f7;
     /* Border color */
     border-radius: 10px;
     /* Rounded corners */
@@ -175,7 +181,7 @@ a:hover {
     color: black;
     margin-bottom: 10px;
     /* Adjusted margin */
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 .cargo-section p {

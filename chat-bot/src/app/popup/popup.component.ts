@@ -51,6 +51,7 @@ export class PopupComponent implements OnInit {
   dialogeClose(): void {
     this.dataService.updatecloseHeader(false);
     this.dataService.updateInternalVariable("nothing");
+    this.dataService.updateSharedVariable(true);
     this.dialogRef.close();
   }
 

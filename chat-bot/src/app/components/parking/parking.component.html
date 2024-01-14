@@ -147,8 +147,34 @@
         </ng-container>
     </form>
     <ng-container *ngIf="isShowTable">
-        <div class="formlook">
-            <div data-row="traveller">
+        <div class="tableStylling">
+            <table class="mat-elevation-z8">
+            <tr>
+                <th>Traveller</th>
+                <td>{{parkingForm.value.type}}</td>
+            </tr>
+            <tr>
+                <th>Check In Time</th>
+                <td>{{parkingForm.value.checkinDate | date:"yyyy/MM/dd" }} &nbsp; {{showCheckinHour}}:00</td>
+            </tr>
+            <tr>
+                <th>Check Out Time</th>
+                <td>{{parkingForm.value.checkinDate | date:"yyyy/MM/dd" }} &nbsp; {{showCheckinHour}}:00</td>
+            </tr>
+            <tr>
+                <th>Duration</th>
+                <td>{{duration}} hours</td>
+            </tr>
+            <tr>
+                <th>Mode of Payment</th>
+                <td>Online Payment</td>
+            </tr>
+            <tr>
+                <th>Total Amount</th>
+                <td>INR {{cost}}</td>
+            </tr>
+        </table>
+            <!-- <div>
                 <span class="left">Traveller</span>
                 <span class="right">{{parkingForm.value.type}}</span>
             </div>
@@ -171,7 +197,7 @@
             <div>
                 <span>Total Amount</span>
                 <span>INR {{cost}}</span>
-            </div>
+            </div> -->
         </div>
     </ng-container>
 </div>

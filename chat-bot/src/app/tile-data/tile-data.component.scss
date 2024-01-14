@@ -234,3 +234,12 @@ a:hover {
 }
 
 // Shivani End
+
+//sharmaji starts
+// ::ng-deep .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+//     background: rgb(235, 238, 253) !important;
+// }
+::ng-deep .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover {
+    background: rgb(235, 238, 253) !important;
+}
+//sharmaji ends

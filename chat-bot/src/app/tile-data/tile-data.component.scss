@@ -118,7 +118,7 @@ mat-expansion-panel {
 mat-expansion-panel-header {
     // color: #fff;
     background-color: rgb(235, 238, 253);
-  
+
 }
 
 mat-panel-title {
@@ -239,7 +239,14 @@ a:hover {
 // ::ng-deep .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
 //     background: rgb(235, 238, 253) !important;
 // }
-::ng-deep .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover {
+::ng-deep .mat-expansion-panel-header.mat-expanded:focus,
+.mat-expansion-panel-header.mat-expanded:hover {
     background: rgb(235, 238, 253) !important;
+    height: 45px;
 }
+
 //sharmaji ends
+
+.cab-links a {
+    text-decoration: none;
+}

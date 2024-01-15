@@ -1,6 +1,6 @@
 [
     {
-        "name": "Cafe Coffee Day CCD",
+        "name": "Cafe Coffee Day",
         "link":"https://www.newdelhiairport.in/eat-and-dine/ccd",
         "Image_URL":"https://www.newdelhiairport.in/img/shop-and-eat/CCD-logo.gif?q=638391327083354487"
     },
@@ -8,11 +8,6 @@
         "name": "Nescafe",
         "link":"https://www.newdelhiairport.in/eat-and-dine/nescafe",
         "Image_URL":"https://www.newdelhiairport.in/img/shop-and-eat/Nescafe.jpg?q=638391327083354487"
-    },
-    {
-        "name": "Starbucks",
-        "link":"https://www.newdelhiairport.in/eat-and-dine/starbucks",
-        "Image_URL":"https://www.newdelhiairport.in/img/shop-and-eat/Starbucks.jpg?q=638391327083354487"
     },
     {
         "name": "Cafe Espresso",
@@ -38,15 +33,5 @@
         "name": "Burger King",
         "link":"https://www.newdelhiairport.in/eat-and-dine/burger-king",
         "Image_URL":"https://www.newdelhiairport.in/img/shop-and-eat/Burger-King.jpg?q=638391327083354487"
-    },
-    {
-        "name": "Wow Momo",
-        "link":"https://www.newdelhiairport.in/eat-and-dine/wow-momo",
-        "Image_URL":"https://www.newdelhiairport.in/img/shop-and-eat/wow-momo.jpg?q=638391327083354487"
-    },
-    {
-        "name": "Taste of India",
-        "link":"https://www.newdelhiairport.in/eat-and-dine/taste-of-india",
-        "Image_URL":"https://www.newdelhiairport.in/img/shop-and-eat/Taste-of-India.jpg?q=638391327083354487"
     }
 ]

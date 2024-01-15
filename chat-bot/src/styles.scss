@@ -37,7 +37,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  
+
 }
 
 
@@ -79,7 +79,7 @@ a {
 
 
 .tableStylling {
-  padding: 1rem 0 1rem 0;
+  padding: 0rem 0 1rem 0;
 }
 
 .mat-mdc-form-field {
@@ -111,10 +111,8 @@ a {
 
 // new changes 
 
-.mat-typography h2{
-  font-size:18px;
+.mat-typography h2 {
+  font-size: 18px;
   font-weight: 500;
   // padding-top: 2px;
 }
-
-

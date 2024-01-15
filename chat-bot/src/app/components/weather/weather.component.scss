@@ -97,7 +97,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin-top: 1rem;
+    // margin-top: 1rem;
 }
 
 .weather__card {
@@ -108,11 +108,11 @@
     // background: #1dbf6e;
     // padding: 1.2rem;
     // new change
-    padding: 0.1rem;
+    // padding: 0.1rem;
     border-radius: 10px;
     // transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out, background 0.5s ease-in-out;
-    
+
 }
 
 .weather__card:hover {
@@ -127,7 +127,8 @@
 .weather__card p {
     // font-size: 16px;
     font-size: 13px;
-    margin: 0.5rem;
+    font-weight: 450;
+    margin: 0.15rem;
 }
 
 /* Added animations */
@@ -153,24 +154,27 @@
 
 
 // new changes 
-.weatherContainer{
+.weatherContainer {
     background-color: #f7f7f7;
     border-radius: 10px;
     padding: 1.5rem;
 }
-.weather__city{
-    font-size:28px;
+
+.weather__city {
+    font-size: 28px;
 }
-.weather__datetime{
+
+.weather__datetime {
     align-items: center;
+    margin: 0 0 0 1rem;
 
 }
 
-.weather__icon{
+.weather__icon {
     text-align: center;
 }
 
-.weather__forecast{
+.weather__forecast {
     text-align: center;
 }
 
